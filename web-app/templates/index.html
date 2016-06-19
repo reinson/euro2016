@@ -91,7 +91,7 @@ d3.json("world-50m.json", function(error, world) {
 
   svg.selectAll(".country")
       .data(countries)
-    .enter().insert("path", ".graticule")
+      .enter().insert("path", ".graticule")
       .attr("class", "country")
       .attr("d", path);
      // .style("fill", function(d, i) { return color(d.color = d3.max(neighbors[i], function(n) { return countries[n].color; }) + 1 | 0); });
@@ -100,6 +100,18 @@ d3.json("world-50m.json", function(error, world) {
       .datum(topojson.mesh(world, world.objects.countries, function(a, b) { return a !== b; }))
       .attr("class", "boundary")
       .attr("d", path);
+
+  aa = [-0.189926, 51.480068]; //[longitude, latitude]
+  bb = [26.798116 , 58.4109399];
+
+  svg.selectAll("circle")
+      .data([aa,bb]).enter()
+      .append("circle")
+      .attr("cx", function (d) { console.log(projection(d)); return projection(d)[0]; })
+      .attr("cy", function (d) { return projection(d)[1]; })
+      .attr("r", "3px")
+      .attr("fill", "red")
+
 });
 
 d3.select(self.frameElement).style("height", height + "px");
