@@ -9,7 +9,9 @@ body {
 }
 
 .country {
-    fill: #adafae;
+    fill: none;
+    stroke: grey;
+  stroke-width: 1;
 }
 
 .stroke {
@@ -22,12 +24,6 @@ body {
   fill: #fff;
 }
 
-.graticule {
-  fill: none;
-  stroke: none;
-  stroke-width: .5px;
-  stroke-opacity: .5;
-}
 
 .land {
   fill: #222;
@@ -36,7 +32,7 @@ body {
 .boundary {
   fill: none;
   stroke: white;
-  stroke-width: .5px;
+  stroke-width: .0px;
 }
 
 </style>
@@ -63,7 +59,8 @@ var graticule = d3.geo.graticule();
 
 var svg = d3.select("body").append("svg")
     .attr("width", width)
-    .attr("height", height);
+    .attr("height", height)
+    .append("g");
 
 svg.append("defs").append("path")
     .datum({type: "Sphere"})
@@ -78,39 +75,38 @@ svg.append("use")
     .attr("class", "fill")
     .attr("xlink:href", "#sphere");
 
-svg.append("path")
-    .datum(graticule)
-    .attr("class", "graticule")
-    .attr("d", path);
 
-d3.json("world-50m.json", function(error, world) {
+d3.json("world-110m.json", function(error, world) {
   if (error) throw error;
 
   var countries = topojson.feature(world, world.objects.countries).features,
       neighbors = topojson.neighbors(world.objects.countries.geometries);
 
+//filter countries by id (Estonia 233)
+//  countries = countries.filter(function(d){return d.id==233});
+
   svg.selectAll(".country")
       .data(countries)
       .enter().insert("path", ".graticule")
       .attr("class", "country")
-      .attr("d", path);
-     // .style("fill", function(d, i) { return color(d.color = d3.max(neighbors[i], function(n) { return countries[n].color; }) + 1 | 0); });
-
-  svg.insert("path", ".graticule")
-      .datum(topojson.mesh(world, world.objects.countries, function(a, b) { return a !== b; }))
-      .attr("class", "boundary")
-      .attr("d", path);
+      .attr("d", path)
+      //.style("fill", function(d, i) { return color(d.color = d3.max(neighbors[i], function(n) { return countries[n].color; }) + 1 | 0); });
 
   aa = [-0.189926, 51.480068]; //[longitude, latitude]
   bb = [26.798116 , 58.4109399];
+
+  //var x = projection(aa)[0];
+  //var y = projection(aa)[1];
 
   svg.selectAll("circle")
       .data([aa,bb]).enter()
       .append("circle")
       .attr("cx", function (d) { console.log(projection(d)); return projection(d)[0]; })
       .attr("cy", function (d) { return projection(d)[1]; })
-      .attr("r", "3px")
-      .attr("fill", "red")
+      .attr("r", "1px")
+      .attr("fill", "red");
+
+//  svg.attr("transform","translate(-180,850)");
 
 });
 
