@@ -40,6 +40,7 @@ body {
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script src="//d3js.org/d3.geo.projection.v0.min.js"></script>
 <script src="//d3js.org/topojson.v1.min.js"></script>
+<script src="//d3js.org/queue.v1.min.js"></script>
 <script>
 
 var width = 960,
@@ -75,12 +76,20 @@ svg.append("use")
     .attr("class", "fill")
     .attr("xlink:href", "#sphere");
 
+queue()
+    .defer(d3.json, "world-50m.json")
+    .defer(d3.csv, "euro2016players_lat_lng.csv")
+    .await(draw);
 
-d3.json("world-110m.json", function(error, world) {
-  if (error) throw error;
-
+function draw(error, world, players){
   var countries = topojson.feature(world, world.objects.countries).features,
       neighbors = topojson.neighbors(world.objects.countries.geometries);
+
+  players.forEach(function(d){
+    d.lat = +d.lat;
+    d.lng = +d.lng;
+    d.crds = [d.lng,d.lat];
+  });
 
 //filter countries by id (Estonia 233)
 //  countries = countries.filter(function(d){return d.id==233});
@@ -89,7 +98,7 @@ d3.json("world-110m.json", function(error, world) {
       .data(countries)
       .enter().insert("path", ".graticule")
       .attr("class", "country")
-      .attr("d", path)
+      .attr("d", path);
       //.style("fill", function(d, i) { return color(d.color = d3.max(neighbors[i], function(n) { return countries[n].color; }) + 1 | 0); });
 
   aa = [-0.189926, 51.480068]; //[longitude, latitude]
@@ -99,16 +108,20 @@ d3.json("world-110m.json", function(error, world) {
   //var y = projection(aa)[1];
 
   svg.selectAll("circle")
-      .data([aa,bb]).enter()
+      .data(players).enter()
       .append("circle")
-      .attr("cx", function (d) { console.log(projection(d)); return projection(d)[0]; })
-      .attr("cy", function (d) { return projection(d)[1]; })
-      .attr("r", "1px")
-      .attr("fill", "red");
+      .attr("cx", function (d) { console.log(projection(d)); return projection(d.crds)[0]; })
+      .attr("cy", function (d) { return projection(d.crds)[1]; })
+      .attr("r", "3px")
+      .attr("opacity",0.6)
+      .attr("fill", "red")
+      .on("click",function(d){
+          console.log(d);
+        });
 
-//  svg.attr("transform","translate(-180,850)");
+  //svg.attr("transform","translate(-180,850)");
 
-});
+};
 
 d3.select(self.frameElement).style("height", height + "px");
 
