@@ -43,25 +43,28 @@ body {
 <script src="//d3js.org/queue.v1.min.js"></script>
 <script>
 
-var width = 960,
-    height = 580;
+var margin = 30,
+    width = 900-2*margin,
+    height = 680-2*margin;
 
 var color = d3.scale.category10();
 
-var projection = d3.geo.kavrayskiy7()
-    .scale(170)
+var projection = d3.geo.azimuthalEquidistant()
+    .scale(900)
+    .center([17.25,54.25])
     .translate([width / 2, height / 2])
+        .clipExtent([[margin,margin],[width,height]])
     .precision(.1);
 
 var path = d3.geo.path()
     .projection(projection);
 
-var graticule = d3.geo.graticule();
 
 var svg = d3.select("body").append("svg")
-    .attr("width", width)
-    .attr("height", height)
-    .append("g");
+    .attr("width", width+2*margin)
+    .attr("height", height+2*margin)
+    .append("g")
+    .attr("transform","translate(" + margin + "," + margin + ")");
 
 svg.append("defs").append("path")
     .datum({type: "Sphere"})
