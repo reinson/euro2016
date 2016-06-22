@@ -57,7 +57,7 @@ def main():
 
     links = [r.attrs["href"] for r in rows]
 
-    with open("euro2016players.csv", "w", encoding='utf-8') as f:
+    with open("data/euro2016players_1.csv", "w", encoding='utf-8') as f:
         fieldnames = ["team", "name", "birthday", "age", "club", "club_country", "caps",
                       "height", "weight", "position"]
         writer = csv.DictWriter(f, fieldnames=fieldnames)
