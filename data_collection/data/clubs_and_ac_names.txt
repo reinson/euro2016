@@ -1,0 +1,214 @@
+Lazio	ITA	Italy	Lazio, Italy
+Skënderbeu	ALB	Albania	Rruga Skenderbeu, Tirana, Albania
+Partizani	ALB	Albania	Partizani, Rruga Rauf Nallbani, Fier, Albania
+Giannina	GRE	Greece	Ioannina, Greece
+Napoli	ITA	Italy	Naples, Metropolitan City of Naples, Italy
+Lugano	SUI	Switzerland	Lugano, Switzerland
+Qarabağ	AZE	Azerbaijan	Qarabağ, Samad Vurghun, Sumqayit, Azerbaijan
+Köln	GER	Germany	Cologne, Germany
+Basel	SUI	Switzerland	Basel, Switzerland
+Frosinone	ITA	Italy	Frosinone, Province of Frosinone, Italy
+Nantes	FRA	France	Nantes, France
+Como	ITA	Italy	Como, Italy
+Pescara	ITA	Italy	Pescara, Province of Pescara, Italy
+Zürich	SUI	Switzerland	Zürich, Switzerland
+PAOK	GRE	Greece	FAILED
+Rijeka	CRO	Croatia	Rijeka, Croatia
+Freiburg	GER	Germany	Freiburg, Germany
+Vaduz	LIE	Liechtenstein	Vaduz, Liechtenstein
+Colorado	USA	United States	Colorado, United States
+İstanbul Başakşehir	TUR	Turkey	Başakşehir, İstanbul, Turkey
+Austria Wien	AUT	Austria	Austria Classic Hotel Wien, Praterstraße, Vienna, Austria
+Frankfurt	GER	Germany	Frankfurt, Germany
+Ingolstadt	GER	Germany	Ingolstadt, Germany
+Dynamo Kyiv	UKR	Ukraine	Dynamo Kyiv, Kiev, Ukraine
+Mönchengladbach	GER	Germany	Mönchengladbach, Germany
+Leicester	ENG	United Kingdom	Leicester, United Kingdom
+Watford	ENG	United Kingdom	Watford, United Kingdom
+Tottenham	ENG	United Kingdom	Tottenham, London, United Kingdom
+Stuttgart	GER	Germany	Stuttgart, Germany
+Darmstadt	GER	Germany	Darmstadt, Germany
+Leipzig	GER	Germany	Leipzig, Germany
+Bayern	GER	Germany	Bayern, Germany
+Bremen	GER	Germany	Bremen, Germany
+Mainz	GER	Germany	Mainz, Germany
+Schalke	GER	Germany	Schalke, Gelsenkirchen, Germany
+Luzern	SUI	Switzerland	Lucerne, Switzerland
+Stoke	ENG	United Kingdom	Stoke, United Kingdom
+1860 München	GER	Germany	München 1860, Hirschbach, Germany
+Chelsea	ENG	United Kingdom	Chelsea, London, United Kingdom
+Liverpool	ENG	United Kingdom	Liverpool, United Kingdom
+Mechelen	BEL	Belgium	Mechelen, Belgium
+Barcelona	ESP	Spain	Barcelona, Spain
+Galatasaray	TUR	Turkey	Ortaköy Mahallesi, Galatasaray University, Çırağan Caddesi, Beşiktaş/İstanbul, Turkey
+Club Brugge	BEL	Belgium	Club Brugge, Olympialaan, Bruges, Belgium
+Genk	BEL	Belgium	Genk, Belgium
+Oostende	BEL	Belgium	Ostend, Belgium
+Montreal	CAN	Canada	Montreal, QC, Canada
+Roma	ITA	Italy	Rome, Metropolitan City of Rome, Italy
+Zenit	RUS	Russian Federation	Zenit, prospekt Mira, Omsk, Omsk Oblast, Russian Federation
+Man. City	ENG	United Kingdom	man near City, Rothbury Terrace, Newcastle upon Tyne, United Kingdom
+Man. United	ENG	United Kingdom	Manchester United Museum & Stadium Tour, Sir Matt Busby Way, Stretford, United Kingdom
+Atlético	ESP	Spain	Calle Atlético de Madrid, Madrid, Spain
+Everton	ENG	United Kingdom	Everton, United Kingdom
+Marseille	FRA	France	Marseille, France
+Hajduk Split	CRO	Croatia	Autoškola HAJDUK, Bihaćka ulica, Split, Croatia
+Monaco	FRA	France	Bridgestreet Monaco - Cap D 'Ail, Avenue du Trois Septembre, Cap-d'Ail, France
+Sassuolo	ITA	Italy	Sassuolo, Province of Modena, Italy
+Lokomotiv Moskva	RUS	Russian Federation	Ice Palace "Locomotive", Moscow, Russian Federation
+Leverkusen	GER	Germany	Leverkusen, Germany
+Shakhtar Donetsk	UKR	Ukraine	Stadion Shakhtar, Donetsk, Donetsk Oblast, Ukraine
+Dinamo Zagreb	CRO	Croatia	DINAMO, Bukovačka cesta, Zagreb, Croatia
+Internazionale	ITA	Italy	Hotel Internazionale, Via Gardesana, Torri del Benaco, Province of Verona, Italy
+Real Madrid	ESP	Spain	Real Madrid Store, La Rambla, Barcelona, Spain
+Fiorentina	ITA	Italy	Fiorentina, Piazza Piattellina, Florence, Metropolitan City of Florence, Italy
+Hoffenheim	GER	Germany	Hoffenheim, Sinsheim, Germany
+Juventus	ITA	Italy	Juventus Stadium, Corso Gaetano Scirea, Turin, Metropolitan City of Turin, Italy
+Málaga	ESP	Spain	Málaga, Spain
+Arsenal	ENG	United Kingdom	Arsenal, London Borough of Islington, United Kingdom
+Liberec	CZE	Czech Republic	Liberec, Czech Republic
+Fenerbahçe	TUR	Turkey	Fenerbahçe Mahallesi, Fenerbahce TV, Kadıköy, Turkey
+Plzeň	CZE	Czech Republic	Plzeň, Czech Republic
+Bursaspor	TUR	Turkey	Gaziakdemir Mahallesi, Bursaspor Store, Osmangazi/Bursa, Turkey
+Sparta Praha	CZE	Czech Republic	AC Sparta Praha, Milady Horákové, Prague, Czech Republic
+Sheff. Wednesday	ENG	United Kingdom	FAILED
+Bordeaux	FRA	France	Bordeaux, France
+Kasımpaşa	TUR	Turkey	Kasımpaşa, Turkey
+Brighton	ENG	United Kingdom	Brighton, United Kingdom
+Hertha	GER	Germany	Herthastraße, Einbeck, Germany
+Slavia Praha	CZE	Czech Republic	Hotel Slavia, Vladivostocká, Prague, Czech Republic
+Southampton	ENG	United Kingdom	Southampton, United Kingdom
+Burnley	ENG	United Kingdom	Burnley, United Kingdom
+Rennes	FRA	France	Rennes, France
+Lyon	FRA	France	Lyon, France
+Sevilla	ESP	Spain	Seville, Spain
+Crystal Palace	ENG	United Kingdom	Crystal Palace, London, United Kingdom
+West Ham	ENG	United Kingdom	West Ham, London, United Kingdom
+Paris	FRA	France	Paris, France
+Newcastle	ENG	United Kingdom	Newcastle, United Kingdom
+Tigres	MEX	Mexico	Universidad Autonoma de Nuevo León Campus de Ciencias Agropecuarias, Ex Hacienda el Cañada, General Escobedo, Mexico
+Valencia	ESP	Spain	Valencia, Spain
+Dortmund	GER	Germany	Dortmund, Germany
+Wolfsburg	GER	Germany	Wolfsburg, Germany
+Beşiktaş	TUR	Turkey	Beşiktaş, Turkey
+Haladás	HUN	Hungary	Bábonymegyer, Haladás Street, Hungary
+Ferencváros	HUN	Hungary	Budapest, Ferencváros, Hungary
+Videoton	HUN	Hungary	Videoton Industrial Park, Székesfehérvár, Gate 2, Székesfehérvár, Berényi Way, Hungary
+Debrecen	HUN	Hungary	Debrecen, Hungary
+Lech	POL	Poland	Lech, Wola Jachowa, Poland
+Puskás Akadémia	HUN	Hungary	FAILED
+Wisła	POL	Poland	Wisła, Poland
+MTK	HUN	Hungary	FAILED
+Diósgyőr	HUN	Hungary	Miskolc, Diósgyőr, Hungary
+Nürnberg	GER	Germany	Nuremberg, Germany
+Hannover	GER	Germany	Hanover, Germany
+Al-Gharafa	QAT	Qatar	Al Gharafa, Al Rayyan, Qatar
+Legia	POL	Poland	Legia, Stalowa, Warsaw, Poland
+Slovan Bratislava	SVK	Slovakia	FAILED
+Bodø/Glimt	NOR	Norway	FAILED
+Hammarby	SWE	Sweden	Hammarby, Sweden
+Sandefjord	NOR	Norway	Sandefjord, Norway
+AIK	SWE	Sweden	AIK Shop, Dalvägen, Solna, Sweden
+Göteborg	SWE	Sweden	Gothenburg, Sweden
+Lokeren	BEL	Belgium	Lokeren, Belgium
+Krasnodar	RUS	Russian Federation	Krasnodar, Krasnodar Krai, Russian Federation
+AGF	DEN	Denmark	Agf Holding ApS, La Cours Vej, Ikast, Denmark
+Cesena	ITA	Italy	Cesena, Province of Forlì-Cesena, Italy
+Norrköping	SWE	Sweden	Norrköping, Sweden
+OB	DEN	Denmark	Ob, Smallegade, Frederiksberg, Denmark
+Swansea	ENG	United Kingdom	Swansea, United Kingdom
+Malmö	SWE	Sweden	Malmö, Sweden
+Sundsvall	SWE	Sweden	Sundsvall, Sweden
+Cardiff	WAL	Wales	Cardiff, Wales, United Kingdom
+Udinese	ITA	Italy	Udinese Store, Via Portanuova, Udine, Province of Udine, Italy
+Charlton	ENG	United Kingdom	Charlton, London, United Kingdom
+Augsburg	GER	Germany	Augsburg, Germany
+Kaiserslautern	GER	Germany	Kaiserslautern, Germany
+Molde	NOR	Norway	Molde, Norway
+Milan	ITA	Italy	Milan, Metropolitan City of Milan, Italy
+Bologna	ITA	Italy	Bologna, Metropolitan City of Bologna, Italy
+Torino	ITA	Italy	Turin, Metropolitan City of Turin, Italy
+Hamilton	SCO	Scotland	Hamilton, Scotland, United Kingdom
+Linfield	NIR	North Ireland	Linfield Drive, Belfast, Ireland Utara, United Kingdom
+St Johnstone	SCO	Scotland	FAILED
+Fleetwood	ENG	United Kingdom	Fleetwood, United Kingdom
+West Brom	ENG	United Kingdom	West Bromwich Albion Club Shop, Brierley Hill, United Kingdom
+Fulham	ENG	United Kingdom	Fulham, London, United Kingdom
+Doncaster	ENG	United Kingdom	Doncaster, United Kingdom
+Melbourne City	AUS	Australia	Melbourne, Victoria, Australia
+MK Dons	ENG	United Kingdom	MK Dons, Grafton Street, Bletchley, United Kingdom
+Millwall	ENG	United Kingdom	Millwall, London, United Kingdom
+Blackburn	ENG	United Kingdom	Blackburn, United Kingdom
+Leeds	ENG	United Kingdom	Leeds, United Kingdom
+Reading	ENG	United Kingdom	Reading, United Kingdom
+Nottm Forest	ENG	United Kingdom	FAILED
+Kilmarnock	SCO	Scotland	Kilmarnock, Scotland, United Kingdom
+Aberdeen	SCO	Scotland	Aberdeen, Scotland, United Kingdom
+Wigan	ENG	United Kingdom	Wigan, United Kingdom
+Birmingham	ENG	United Kingdom	Birmingham, United Kingdom
+QPR	ENG	United Kingdom	QPR, South Africa Road, London, United Kingdom
+Bournemouth	ENG	United Kingdom	Bournemouth, United Kingdom
+Palermo	ITA	Italy	Palermo, Province of Palermo, Italy
+Lechia	POL	Poland	Lechia Tennis Club, Traugutta, Gdańsk, Poland
+Cagliari	ITA	Italy	Cagliari, Province of Cagliari, Italy
+Empoli	ITA	Italy	Empoli, Metropolitan City of Florence, Italy
+		United States Minor Outlying Islands	United States Minor Outlying Islands
+Zagłębie	POL	Poland	Zagłębie, Łódź, Poland
+Ajax	NED	Netherlands	Ajaxstraat, Hengelo, Netherlands
+Ruch	POL	Poland	KIOSK RUCH, Gdańska, Bydgoszcz, Poland
+Sporting CP	POR	Portugal	FAILED
+Lorient	FRA	France	Lorient, France
+Benfica	POR	Portugal	Benfica, Lisbon, Portugal
+Porto	POR	Portugal	Porto, Portugal
+Braga	POR	Portugal	Braga, Portugal
+LOSC	FRA	France	france air near Lošč, Zagorje, Šmarje pri Jelšah, Slovenia
+Aston Villa	ENG	United Kingdom	Aston Villa New St Store, New Street, Birmingham, United Kingdom
+Sunderland	ENG	United Kingdom	Sunderland, United Kingdom
+Derby	ENG	United Kingdom	Derby, United Kingdom
+Hull	ENG	United Kingdom	Hull, United Kingdom
+Norwich	ENG	United Kingdom	Norwich, United Kingdom
+LA Galaxy	USA	United States	LA Galaxy, South Avalon Boulevard, Carson, CA, United States
+Ipswich	ENG	United Kingdom	Ipswich, United Kingdom
+Astra	ROU	Romania	Astra, Brașov, Brașov County, Romania
+Rayo Vallecano	ESP	Spain	Fundación Rayo Vallecano, Calle del Rayo Vallecano de Madrid, Madrid, Spain
+Ludogorets	BUL	Bulgaria	ulitsa "Ludogorets", Dulovo, Bulgaria
+Dinamo Bucureşti	ROU	Romania	FAILED
+Al-Sailiya	QAT	Qatar	Al Sailiya Sport Club, Ar-Rayyan, Al Rayyan, Qatar
+Pandurii	ROU	Romania	Strada Pandurii, Costești, Argeș County, Romania
+H. Beer-Sheva	ISR	Israel	FAILED
+Steaua	ROU	Romania	Stadionul Ghencea, Bucharest, Romania
+Osmanlıspor	TUR	Turkey	FAILED
+Al-Ittihad	KSA	Saudi Arabia	Al Ittihad Insurance, Al Khobar, Eastern Province, Saudi Arabia
+Córdoba	ESP	Spain	Córdoba, Spain
+Gençlerbirliği	TUR	Turkey	Kazım Karabekir Mahallesi, Adana Gençlerbirliği, Yüreğir/Adana, Turkey
+CSKA Moskva	RUS	Russian Federation	CSKA Sports Gymnastics Club, Moscow, Russian Federation
+Spartak Moskva	RUS	Russian Federation	Фонд Поддержки Ветеранов И Молодежи.Футбольного Клуба Спартак-Москва, Pogodinskaya ulitsa, Moscow, Russian Federation
+Terek	RUS	Russian Federation	Terek River, Russian Federation
+Rapid Wien	AUT	Austria	Fahrschule Rapid, Hütteldorfer Straße, Vienna, Austria
+Sampdoria	ITA	Italy	Sampdoria Vini, Via Monte Cimone, Cornedo Vicentino, Province of Vicenza, Italy
+Dinamo Moskva	RUS	Russian Federation	Dinamo Apartment, Leningradsky Avenue, Moscow, Russian Federation
+Jablonec	CZE	Czech Republic	Pension Jablonec, Palackého, Jablonec nad Nisou, Czech Republic
+Žilina	SVK	Slovakia	Žilina, Slovakia
+Willem II	NED	Netherlands	Willem II College, Tatraweg, Tilburg, Netherlands
+Athletic	ESP	Spain	Bar Athletic, Bilbao, Spain
+Villarreal	ESP	Spain	Villarreal, Castellón, Spain
+Celta	ESP	Spain	Librería Celta, Avenida de Balaídos, Vigo, Spain
+København	DEN	Denmark	Copenhagen, Denmark
+Celtic	SCO	Scotland	Celtic Park, Glasgow, Scotland, United Kingdom
+Hamburg	GER	Germany	Hamburg, Germany
+Grasshoppers	SUI	Switzerland	FAILED
+Olympiacos	GRE	Greece	Olympiacos Piscina, Chaidariou, Pireas, Greece
+Trabzonspor	TUR	Turkey	Üniversite Mahallesi, Trabzonspor, Trabzon Merkez, Turkey
+Panathinaikos	GRE	Greece	FAILED
+Toulouse	FRA	France	Toulouse, France
+Young Boys	SUI	Switzerland	FAILED
+Genoa	ITA	Italy	Genoa, Metropolitan City of Genoa, Italy
+Beijing Guoan	CHN	China	FAILED
+Nordsjælland	DEN	Denmark	Nordsjælland Basketball, Milnersvej, Hillerød, Denmark
+Zorya	UKR	Ukraine	Zorya, Rivnens'ka oblast, Ukraine
+Amkar	RUS	Russian Federation	Amkar, Football Club, ulitsa Kuybysheva, Perm, Perm Krai, Russian Federation
+Dnipro	UKR	Ukraine	ApartHotel Dnipro, Kniazia Volodymyra Velykoho Street, Dnepropetrovsk, Dnipropetrovsk Oblast, Ukraine
+Kairat	KAZ	Kazakhstan	Kairat, Almaty Region, Kazakhstan
+Ufa	RUS	Russian Federation	Ufa, Republic of Bashkortostan, Russian Federation
+Inverness	SCO	Scotland	Inverness, Scotland, United Kingdom
+Wolves	ENG	United Kingdom	Wolves Museum, Waterloo Road, Wolverhampton, United Kingdom

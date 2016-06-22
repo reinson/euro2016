@@ -1,0 +1,214 @@
+Lazio	ITA	Italy	football club near Lazio, Italy
+Skënderbeu	ALB	Albania	football club near Rruga Skenderbeu, Tirana, Albania
+Partizani	ALB	Albania	football club near Partizani, Rruga Rauf Nallbani, Fier, Albania
+Giannina	GRE	Greece	football club near Ioannina, Greece
+Napoli	ITA	Italy	football club near Naples, Metropolitan City of Naples, Italy
+Lugano	SUI	Switzerland	football club near Lugano, Switzerland
+Qarabağ	AZE	Azerbaijan	football club near Qarabağ, Baku, Azerbaijan
+Köln	GER	Germany	football club near Cologne, Germany
+Basel	SUI	Switzerland	football club near Basel, Switzerland
+Frosinone	ITA	Italy	football club near Frosinone, Province of Frosinone, Italy
+Nantes	FRA	France	football club near Nantes, France
+Como	ITA	Italy	football club near Como, Italy
+Pescara	ITA	Italy	football club near Pescara, Province of Pescara, Italy
+Zürich	SUI	Switzerland	football club near Zürich, Switzerland
+PAOK	GRE	Greece	FAILED
+Rijeka	CRO	Croatia	football club near Rijeka, Croatia
+Freiburg	GER	Germany	football club near Freiburg, Germany
+Vaduz	LIE	Liechtenstein	football club near Vaduz, Liechtenstein
+Colorado	USA	United States	football club near Colorado, United States
+İstanbul Başakşehir	TUR	Turkey	football club near Başakşehir, İstanbul, Turkey
+Austria Wien	AUT	Austria	FAILED
+Frankfurt	GER	Germany	football club near Frankfurt, Germany
+Ingolstadt	GER	Germany	football club near Ingolstadt, Germany
+Dynamo Kyiv	UKR	Ukraine	FAILED
+Mönchengladbach	GER	Germany	football club near Mönchengladbach, Germany
+Leicester	ENG	United Kingdom	football club near Leicester, United Kingdom
+Watford	ENG	United Kingdom	football club near Watford, United Kingdom
+Tottenham	ENG	United Kingdom	football club near Tottenham, London, United Kingdom
+Stuttgart	GER	Germany	football club near Stuttgart, Germany
+Darmstadt	GER	Germany	football club near Darmstadt, Germany
+Leipzig	GER	Germany	football club near Leipzig, Germany
+Bayern	GER	Germany	American Football Club Red Devils Kümmersbruck e.V., Heideweg, Ursensollen, Bayern, Germany
+Bremen	GER	Germany	football club near Bremen, Germany
+Mainz	GER	Germany	football club near Mainz, Germany
+Schalke	GER	Germany	football club near Schalke, Gelsenkirchen, Germany
+Luzern	SUI	Switzerland	football club near Lucerne, Switzerland
+Stoke	ENG	United Kingdom	football club near Stoke, United Kingdom
+1860 München	GER	Germany	FAILED
+Chelsea	ENG	United Kingdom	football club near Chelsea, London, United Kingdom
+Liverpool	ENG	United Kingdom	Liverpool Football Club, Anfield Road, Liverpool, United Kingdom
+Mechelen	BEL	Belgium	football club near Mechelen, Belgium
+Barcelona	ESP	Spain	football club near Barcelona, Spain
+Galatasaray	TUR	Turkey	football club near Galatasaray, İstiklal Avenue, Turkey
+Club Brugge	BEL	Belgium	FAILED
+Genk	BEL	Belgium	football club near Genk, Belgium
+Oostende	BEL	Belgium	football club near Ostend, Belgium
+Montreal	CAN	Canada	football club near Montreal, QC, Canada
+Roma	ITA	Italy	football club near Rome, Metropolitan City of Rome, Italy
+Zenit	RUS	Russian Federation	football club near Zenit, Leningrad Oblast, Russian Federation
+Man. City	ENG	United Kingdom	FAILED
+Man. United	ENG	United Kingdom	man united near Cardiff Bay Barrage, Penarth Portway, Cardiff, United Kingdom
+Atlético	ESP	Spain	football club near Calle Atlético de Madrid, Madrid, Spain
+Everton	ENG	United Kingdom	football club near Everton, United Kingdom
+Marseille	FRA	France	football club near Marseille, France
+Hajduk Split	CRO	Croatia	FAILED
+Monaco	FRA	France	football club near Monaco, Saint-Victoret, France
+Sassuolo	ITA	Italy	football club near Sassuolo, Province of Modena, Italy
+Lokomotiv Moskva	RUS	Russian Federation	FAILED
+Leverkusen	GER	Germany	football club near Leverkusen, Germany
+Shakhtar Donetsk	UKR	Ukraine	FAILED
+Dinamo Zagreb	CRO	Croatia	FAILED
+Internazionale	ITA	Italy	football club near Camping Village Internazionale Firenze, Via San Cristofano, Impruneta, Metropolitan City of Florence, Italy
+Real Madrid	ESP	Spain	real madrid near footballticketsbarcelona. com, La Rambla, Barcelona, Spain
+Fiorentina	ITA	Italy	football club near Fiorentina, Province of Livorno, Italy
+Hoffenheim	GER	Germany	football club near Hoffenheim, Sinsheim, Germany
+Juventus	ITA	Italy	FAILED
+Málaga	ESP	Spain	football club near Málaga, Spain
+Arsenal	ENG	United Kingdom	football club near Arsenal, London Borough of Islington, United Kingdom
+Liberec	CZE	Czech Republic	football club near Liberec, Czech Republic
+Fenerbahçe	TUR	Turkey	football club near Fenerbahçe, Kadıköy/İstanbul, Turkey
+Plzeň	CZE	Czech Republic	football club near Plzeň, Czech Republic
+Bursaspor	TUR	Turkey	FAILED
+Sparta Praha	CZE	Czech Republic	football club near Sparta, Prague-Prague 7, Czech Republic
+Sheff. Wednesday	ENG	United Kingdom	FAILED
+Bordeaux	FRA	France	football club near Bordeaux, France
+Kasımpaşa	TUR	Turkey	football club near Kasımpaşa, Turkey
+Brighton	ENG	United Kingdom	football club near Brighton, United Kingdom
+Hertha	GER	Germany	football club near Herthastraße, Einbeck, Germany
+Slavia Praha	CZE	Czech Republic	football club near Slavia, Prague-Prague 10, Czech Republic
+Southampton	ENG	United Kingdom	football club near Southampton, United Kingdom
+Burnley	ENG	United Kingdom	football club near Burnley, United Kingdom
+Rennes	FRA	France	football club near Rennes, France
+Lyon	FRA	France	football club near Lyon, France
+Sevilla	ESP	Spain	football club near Seville, Spain
+Crystal Palace	ENG	United Kingdom	football club near Crystal Palace, London, United Kingdom
+West Ham	ENG	United Kingdom	football club near West Ham, London, United Kingdom
+Paris	FRA	France	football club near Paris, France
+Newcastle	ENG	United Kingdom	football club near Newcastle, United Kingdom
+Tigres	MEX	Mexico	Facultad de Economía, Las Torres, Monterrey, Mexico
+Valencia	ESP	Spain	football club near Valencia, Spain
+Dortmund	GER	Germany	football club near Dortmund, Germany
+Wolfsburg	GER	Germany	football club near Wolfsburg, Germany
+Beşiktaş	TUR	Turkey	football club near Beşiktaş, Turkey
+Haladás	HUN	Hungary	football club near Bábonymegyer, Haladás Street, Hungary
+Ferencváros	HUN	Hungary	football club near Budapest, Ferencváros, Hungary
+Videoton	HUN	Hungary	football club near Veszprém, Videoton, Hungary
+Debrecen	HUN	Hungary	football club near Debrecen, Hungary
+Lech	POL	Poland	FAILED
+Puskás Akadémia	HUN	Hungary	FAILED
+Wisła	POL	Poland	football club near Wisła, Poland
+MTK	HUN	Hungary	FAILED
+Diósgyőr	HUN	Hungary	football club near Miskolc, Diósgyőr, Hungary
+Nürnberg	GER	Germany	football club near Nuremberg, Germany
+Hannover	GER	Germany	football club near Hanover, Germany
+Al-Gharafa	QAT	Qatar	football club near Al Gharafa, Al Rayyan, Qatar
+Legia	POL	Poland	FAILED
+Slovan Bratislava	SVK	Slovakia	FAILED
+Bodø/Glimt	NOR	Norway	FAILED
+Hammarby	SWE	Sweden	football club near Hammarby, Sweden
+Sandefjord	NOR	Norway	football club near Sandefjord, Norway
+AIK	SWE	Sweden	FAILED
+Göteborg	SWE	Sweden	football club near Gothenburg, Sweden
+Lokeren	BEL	Belgium	football club near Lokeren, Belgium
+Krasnodar	RUS	Russian Federation	football club near Krasnodar, Krasnodar Krai, Russian Federation
+AGF	DEN	Denmark	football club near Agf Vej, Viby, Denmark
+Cesena	ITA	Italy	football club near Cesena, Province of Forlì-Cesena, Italy
+Norrköping	SWE	Sweden	football club near Norrköping, Sweden
+OB	DEN	Denmark	FAILED
+Swansea	ENG	United Kingdom	football club near Swansea, United Kingdom
+Malmö	SWE	Sweden	football club near Malmö, Sweden
+Sundsvall	SWE	Sweden	football club near Sundsvall, Sweden
+Cardiff	WAL	Wales	football club near Cardiff, Wales, United Kingdom
+Udinese	ITA	Italy	FAILED
+Charlton	ENG	United Kingdom	football club near Charlton, London, United Kingdom
+Augsburg	GER	Germany	football club near Augsburg, Germany
+Kaiserslautern	GER	Germany	football club near Kaiserslautern, Germany
+Molde	NOR	Norway	football club near Molde, Norway
+Milan	ITA	Italy	football club near Milan, Metropolitan City of Milan, Italy
+Bologna	ITA	Italy	football club near Bologna, Metropolitan City of Bologna, Italy
+Torino	ITA	Italy	football club near Turin, Metropolitan City of Turin, Italy
+Hamilton	SCO	Scotland	football club near Hamilton, Scotland, United Kingdom
+Linfield	NIR	North Ireland	FAILED
+St Johnstone	SCO	Scotland	FAILED
+Fleetwood	ENG	United Kingdom	football club near Fleetwood, United Kingdom
+West Brom	ENG	United Kingdom	football club near West Bromwich, United Kingdom
+Fulham	ENG	United Kingdom	Millennium & Copthorne Hotels At Chelsea Football Club, Wandon Road, Fulham, London, United Kingdom
+Doncaster	ENG	United Kingdom	football club near Doncaster, United Kingdom
+Melbourne City	AUS	Australia	football club near Melbourne, Victoria, Australia
+MK Dons	ENG	United Kingdom	FAILED
+Millwall	ENG	United Kingdom	football club near Millwall, London, United Kingdom
+Blackburn	ENG	United Kingdom	football club near Blackburn, United Kingdom
+Leeds	ENG	United Kingdom	football club near Leeds, United Kingdom
+Reading	ENG	United Kingdom	football club near Reading, United Kingdom
+Nottm Forest	ENG	United Kingdom	FAILED
+Kilmarnock	SCO	Scotland	football club near Kilmarnock, Scotland, United Kingdom
+Aberdeen	SCO	Scotland	football club near Aberdeen, Scotland, United Kingdom
+Wigan	ENG	United Kingdom	football club near Wigan, United Kingdom
+Birmingham	ENG	United Kingdom	Birmingham City Football Club, Cattell Road, Birmingham, United Kingdom
+QPR	ENG	United Kingdom	FAILED
+Bournemouth	ENG	United Kingdom	football club near Bournemouth, United Kingdom
+Palermo	ITA	Italy	football club near Palermo, Province of Palermo, Italy
+Lechia	POL	Poland	FAILED
+Cagliari	ITA	Italy	football club near Cagliari, Province of Cagliari, Italy
+Empoli	ITA	Italy	football club near Empoli, Metropolitan City of Florence, Italy
+		United States Minor Outlying Islands	football club near United States Minor Outlying Islands
+Zagłębie	POL	Poland	football club near Zagłębie, Łódź, Poland
+Ajax	NED	Netherlands	football club near Ajaxstraat, Hengelo, Netherlands
+Ruch	POL	Poland	FAILED
+Sporting CP	POR	Portugal	FAILED
+Lorient	FRA	France	football club near Lorient, France
+Benfica	POR	Portugal	football club near Benfica, Lisbon, Portugal
+Porto	POR	Portugal	football club near Porto, Portugal
+Braga	POR	Portugal	football club near Braga, Portugal
+LOSC	FRA	France	FAILED
+Aston Villa	ENG	United Kingdom	football club near Aston Villa, Timsbury Road, High Littleton, United Kingdom
+Sunderland	ENG	United Kingdom	football club near Sunderland, United Kingdom
+Derby	ENG	United Kingdom	football club near Derby, United Kingdom
+Hull	ENG	United Kingdom	football club near Hull, United Kingdom
+Norwich	ENG	United Kingdom	football club near Norwich, United Kingdom
+LA Galaxy	USA	United States	football club near Galaxy, Lafayette, LA, United States
+Ipswich	ENG	United Kingdom	football club near Ipswich, United Kingdom
+Astra	ROU	Romania	football club near Astra, Brașov, Brașov County, Romania
+Rayo Vallecano	ESP	Spain	FAILED
+Ludogorets	BUL	Bulgaria	football club near ulitsa "Ludogorets", Dulovo, Bulgaria
+Dinamo Bucureşti	ROU	Romania	FAILED
+Al-Sailiya	QAT	Qatar	football club near Al Sailiya, Ar-Rayyan, Qatar
+Pandurii	ROU	Romania	football club near Strada Pandurii, Costești, Argeș County, Romania
+H. Beer-Sheva	ISR	Israel	FAILED
+Steaua	ROU	Romania	football club near Steaua, Slatina, Olt County, Romania
+Osmanlıspor	TUR	Turkey	FAILED
+Al-Ittihad	KSA	Saudi Arabia	football club near Ittihad Street, Dhahran, Eastern Province, Saudi Arabia
+Córdoba	ESP	Spain	football club near Córdoba, Spain
+Gençlerbirliği	TUR	Turkey	football club near Kordonboyu Mahallesi, Gençlerbirliği Sokak, Kartal/İstanbul, Turkey
+CSKA Moskva	RUS	Russian Federation	FAILED
+Spartak Moskva	RUS	Russian Federation	football club near Spartak, Moscow, Russian Federation
+Terek	RUS	Russian Federation	football club near Terek River, Russian Federation
+Rapid Wien	AUT	Austria	FAILED
+Sampdoria	ITA	Italy	FAILED
+Dinamo Moskva	RUS	Russian Federation	football club near Dinamo, Moscow, Russian Federation
+Jablonec	CZE	Czech Republic	football club near Jablonec nad Nisou, Czech Republic
+Žilina	SVK	Slovakia	football club near Žilina, Slovakia
+Willem II	NED	Netherlands	football club near Koning Willem II-Weg, 't Zand, Netherlands
+Athletic	ESP	Spain	football club near Athletic Kalea, Andra Mari, Spain
+Villarreal	ESP	Spain	football club near Villarreal, Castellón, Spain
+Celta	ESP	Spain	football club near Celta, Cuatro Puertas, Spain
+København	DEN	Denmark	Copenhagen Tomahawks American Football Club, Julius Andersens Vej, Copenhagen, Denmark
+Celtic	SCO	Scotland	football club near Celtic Street, Glasgow, Scotland, United Kingdom
+Hamburg	GER	Germany	football club near Hamburg, Germany
+Grasshoppers	SUI	Switzerland	FAILED
+Olympiacos	GRE	Greece	FAILED
+Trabzonspor	TUR	Turkey	football club near İnönü Mahallesi, Trabzonspor Bulvarı, Trabzon Merkez/Trabzon, Turkey
+Panathinaikos	GRE	Greece	FAILED
+Toulouse	FRA	France	football club near Toulouse, France
+Young Boys	SUI	Switzerland	FAILED
+Genoa	ITA	Italy	football club near Genoa, Metropolitan City of Genoa, Italy
+Beijing Guoan	CHN	China	FAILED
+Nordsjælland	DEN	Denmark	FAILED
+Zorya	UKR	Ukraine	football club near Zorya, Rivnens'ka oblast, Ukraine
+Amkar	RUS	Russian Federation	FAILED
+Dnipro	UKR	Ukraine	football club near Dnipro, Kiev, Kyiv city, Ukraine
+Kairat	KAZ	Kazakhstan	football club near Kairat, Almaty Region, Kazakhstan
+Ufa	RUS	Russian Federation	football club near Ufa, Republic of Bashkortostan, Russian Federation
+Inverness	SCO	Scotland	football club near Inverness, Scotland, United Kingdom
+Wolves	ENG	United Kingdom	football club near Wolves Lane, London, United Kingdom
