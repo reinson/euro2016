@@ -154,8 +154,8 @@ function draw_circles(){
     circles.exit().remove();
     circles.enter()
         .append("circle")
-        .attr("cx", function (d) { return projection(d.crds)[0]; })
-        .attr("cy", function (d) { return projection(d.crds)[1]; })
+        .attr("cx", function (d) { return d.x; })
+        .attr("cy", function (d) { return d.y; })
         .attr("r", "3px")
         .attr("opacity",0.7)
         .attr("fill", "#3366cc")
@@ -193,9 +193,10 @@ function draw(error, world, players_from_file){
     players.forEach(function(d){
         d.lat = +d.lat;
         d.lng = +d.lng;
-
-
         d.crds = [d.lng,d.lat];
+        d.px_crds = projection(d.crds);
+        d.x = d.px_crds[0];
+        d.y = d.px_crds[1];
     });
 
 //filter countries by id (Estonia 233)
