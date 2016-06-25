@@ -109,6 +109,11 @@ var zoom = d3.behavior.zoom()
     .scaleExtent([900, 5000])
     .on("zoom", zoomed);
 
+var pack = d3.layout.pack()
+      .value(function(d) { return d.r; })
+      //.size([w, h])
+      .radius(function(d){return d});
+
 
 var svg = d3.select("body").append("svg")
     .attr("width", width+2*margin)
@@ -143,34 +148,34 @@ queue()
     .defer(d3.csv, "euro2016players_lat_lng.csv")
     .await(draw);
 
+function meanx(data){
+    return d3.mean(data, function(d){return d.x_px})
+}
+
 function draw_circles(){
     var menu_val = menu.property("value");
-    var players_to_draw = players.filter(function(d){return d.team == menu_val});
+    var players_to_draw = players.filter(function(d){return d.key == menu_val});
 
   // var aaron = players.filter(function(d){return d.name == "Aaron Hughes"})[0];
    // console.log(projection(aaron.crds));
+    svg.selectAll(".club").remove();
 
-    var circles = svg.selectAll("circle").data(players_to_draw,function(d){return d.name});
-    circles.exit().remove();
-    circles.enter()
-        .append("circle")
-        .attr("cx", function (d) { return d.x; })
-        .attr("cy", function (d) { return d.y; })
-        .attr("r", "3px")
-        .attr("opacity",0.7)
-        .attr("fill", "#3366cc")
-        .on("mouseover",function(d){debugger;
-            var tooltip = d3.select(".tooltip");
-            tooltip.select("#name").text(d.name);
-            tooltip.select("#club").text(d.club + " (" + d.club_city + ", " + d.club_country + ")");
-            tooltip.style("top", (d3.event.pageY + 3 ) + "px")
-                .style("left", (d3.event.pageX + 3 ) + "px").classed("hidden",false);
-            tooltip.classed("hidden",false);
-        })
-        .on("mouseout",function(){
-            d3.select(".tooltip").classed("hidden",true);
-        })
-        .on("click",function(d){console.log(d)});
+    var circles = svg.selectAll("g.club").data(players_to_draw[0].values)
+            .enter().append("g").attr("class","club")
+            .attr("transform",function(d){
+                return "translate(" + d3.mean(d,function(d){return d.x_px}) + "," + d3.mean(d,function(d){return d.y_px})+")"
+              })
+            .each(function(club_data){
+                var g = d3.select(this);
+                club_data.shift();
+                g.selectAll("circle").data(club_data).enter().append("circle")
+                    .attr("r",function(d){return d.r})
+                    .attr("transform",function(d){
+                        return "translate("+ d.x + "," + d.y + ")";
+                        })
+                    .attr("fill-opacity", 0)
+                    .attr("stroke","black")
+            })
 }
 
 function zoomed(){
@@ -195,9 +200,13 @@ function draw(error, world, players_from_file){
         d.lng = +d.lng;
         d.crds = [d.lng,d.lat];
         d.px_crds = projection(d.crds);
-        d.x = d.px_crds[0];
-        d.y = d.px_crds[1];
+        d.x_px = d.px_crds[0];
+        d.y_px = d.px_crds[1];
+        d.r = 3;
     });
+
+    var a = players.filter(function(d){return d.team=="England"});
+    a = group_connected(a);
 
 //filter countries by id (Estonia 233)
 //  countries = countries.filter(function(d){return d.id==233});
@@ -208,21 +217,71 @@ function draw(error, world, players_from_file){
         .attr("class", "country")
         .attr("d", path);
 
-    var euro2016_countries = d3.set();
-    players.forEach(function(d){
-        euro2016_countries.add(d.team)
+    players = d3.nest()
+        .key(function(d){return d.team})
+        .entries(players_from_file);
+
+    players = players.map(function(d){
+        return {key: d.key,
+                values: group_connected(d.values)};
     });
 
+    var euro2016_countries = players.map(function(d){return d.key});
+
     menu.selectAll("option")
-        .data(euro2016_countries.values()).enter()
+        .data(euro2016_countries).enter()
         .append("option")
         .text(function(d){return d});
 
     draw_circles();
-
-
-
 }
+
+function group_connected(nodes){
+    var empty_run = false;
+    var groups = nodes.map(function(d){return [d]});
+
+    while (!empty_run){
+        empty_run = true;
+        for (i = 0; i < groups.length; i++) {
+            var group = groups[i];
+            group.forEach(function (element) {
+                for (j = i + 1; j < groups.length; j++) {
+                    if (connects_to_any(groups[j], element)) {
+                        empty_run = false;
+                        groups[i] = groups[i].concat(groups[j]);
+                        groups.splice(j, 1);
+                    }
+                }
+            })
+        }
+    }
+    groups = groups.map(function(d){return nest_by_club(d)});
+    return groups;
+}
+
+
+function connects_to_any(group,node){
+     return group.some(function(d) {
+         var dx = d.x_px - node.x_px,
+             dy = d.y_px - node.y_px,
+             l = Math.sqrt(dx * dx + dy * dy);
+         return l < node.r + d.r
+     })
+}
+
+function nest_by_club(nodes){
+    nodes = d3.nest()
+            .key(function(d){return d.club})
+            .entries(nodes);
+    return pack.nodes({name: "root",
+                    children: nodes.map(function(d){
+                        return {name: d.key,
+                                children: d.values}
+                    })
+    })
+}
+
+
 
 d3.select(self.frameElement).style("height", height + "px");
 
