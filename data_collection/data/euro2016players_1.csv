@@ -1,0 +1,553 @@
+team,name,birthday,age,club,club_country,caps,height,weight,position
+Albania,Etrit Berisha,10/03/1989,27,Lazio,ITA,37,194,92,Goalkeeper
+Albania,Orges Shehi,25/09/1977,38,Skënderbeu,ALB,7,182,78,Goalkeeper
+Albania,Alban Hoxha,23/11/1987,28,Partizani,ALB,1,188,79,Goalkeeper
+Albania,Andi Lila,12/02/1986,30,Giannina,GRE,59,184,79,Defender
+Albania,Elseid Hysaj,20/02/1994,22,Napoli,ITA,22,182,70,Defender
+Albania,Frédéric Veseli,20/11/1992,23,Lugano,SUI,3,183,80,Defender
+Albania,Ansi Agolli,11/10/1982,33,Qarabağ,AZE,64,179,70,Defender
+Albania,Mërgim Mavraj,09/06/1986,30,Köln,GER,29,189,84,Defender
+Albania,Naser Aliji,27/12/1993,22,Basel,SUI,4,177,73,Defender
+Albania,Arlind Ajeti,25/09/1993,22,Frosinone,ITA,11,185,81,Defender
+Albania,Ermir Lenjani,05/08/1989,26,Nantes,FRA,21,175,65,Midfield
+Albania,Lorik Cana,27/07/1983,32,Nantes,FRA,92,186,77,Midfield
+Albania,Migjen Basha,05/01/1987,29,Como,ITA,19,180,72,Midfield
+Albania,Ledian Memushaj,17/12/1986,29,Pescara,ITA,15,175,71,Midfield
+Albania,Burim Kukeli,16/01/1984,32,Zürich,SUI,17,180,72,Midfield
+Albania,Taulant Xhaka,28/03/1991,25,Basel,SUI,13,172,72,Midfield
+Albania,Ergys Kaçe,08/07/1993,22,PAOK,GRE,17,170,62,Midfield
+Albania,Odise Roshi,22/05/1991,25,Rijeka,CRO,34,187,78,Midfield
+Albania,Amir Abrashi,27/03/1990,26,Freiburg,GER,21,172,71,Midfield
+Albania,Armando Sadiku,27/05/1991,25,Vaduz,LIE,22,185,80,Forward
+Albania,Shkëlzen Gashi,15/07/1988,27,Colorado,USA,14,182,75,Forward
+Albania,Sokol Çikalleshi,27/07/1990,25,İstanbul Başakşehir,TUR,19,185,79,Forward
+Albania,Bekim Balaj,11/01/1991,25,Rijeka,CRO,16,188,80,Forward
+Austria,Robert Almer,20/03/1984,32,Austria Wien,AUT,30,194,88,Goalkeeper
+Austria,Heinz Lindner,17/07/1990,25,Frankfurt,GER,8,187,80,Goalkeeper
+Austria,Ramazan Özcan,28/06/1984,31,Ingolstadt,GER,7,187,84,Goalkeeper
+Austria,Aleksandar Dragović,06/03/1991,25,Dynamo Kyiv,UKR,48,184,76,Defender
+Austria,Martin Hinteregger,07/09/1992,23,Mönchengladbach,GER,16,184,78,Defender
+Austria,Christian Fuchs,07/04/1986,30,Leicester,ENG,77,186,80,Defender
+Austria,Markus Suttner,16/04/1987,29,Ingolstadt,GER,16,179,72,Defender
+Austria,Sebastian Prödl,21/06/1987,29,Watford,ENG,58,194,85,Defender
+Austria,Kevin Wimmer,15/11/1992,23,Tottenham,ENG,4,187,85,Defender
+Austria,Florian Klein,17/11/1986,29,Stuttgart,GER,39,180,66,Defender
+Austria,György Garics,08/03/1984,32,Darmstadt,GER,41,183,76,Midfield
+Austria,Stefan Ilsanker,18/05/1989,27,Leipzig,GER,17,189,86,Midfield
+Austria,David Alaba,24/06/1992,23,Bayern,GER,48,180,75,Midfield
+Austria,Zlatko Junuzović,26/09/1987,28,Bremen,GER,49,172,69,Midfield
+Austria,Martin Harnik,10/06/1987,29,Stuttgart,GER,60,185,75,Midfield
+Austria,Julian Baumgartlinger,02/01/1988,28,Mainz,GER,47,183,82,Midfield
+Austria,Alessandro Schöpf,07/02/1994,22,Schalke,GER,6,178,75,Midfield
+Austria,Marcel Sabitzer,17/03/1994,22,Leipzig,GER,20,177,74,Midfield
+Austria,Jakob Jantscher,08/01/1989,27,Luzern,SUI,22,181,69,Midfield
+Austria,Marko Arnautović,19/04/1989,27,Stoke,ENG,54,192,83,Forward
+Austria,Rubin Okotie,06/06/1987,29,1860 München,GER,18,188,86,Forward
+Austria,Lukas Hinterseer,28/03/1991,25,Ingolstadt,GER,11,192,84,Forward
+Austria,Marc Janko,25/06/1983,32,Basel,SUI,55,196,93,Forward
+Belgium,Thibaut Courtois,11/05/1992,24,Chelsea,ENG,39,199,91,Goalkeeper
+Belgium,Simon Mignolet,06/08/1988,27,Liverpool,ENG,17,193,87,Goalkeeper
+Belgium,Jean-François Gillet,31/05/1979,37,Mechelen,BEL,9,181,82,Goalkeeper
+Belgium,Toby Alderweireld,02/03/1989,27,Tottenham,ENG,57,186,81,Defender
+Belgium,Thomas Vermaelen,14/11/1985,30,Barcelona,ESP,55,183,80,Defender
+Belgium,Jan Vertonghen,24/04/1987,29,Tottenham,ENG,80,189,79,Defender
+Belgium,Jason Denayer,28/06/1995,20,Galatasaray,TUR,7,184,70,Defender
+Belgium,Thomas Meunier,12/09/1991,24,Club Brugge,BEL,6,190,78,Defender
+Belgium,Christian Kabasele,24/02/1991,25,Genk,BEL,0,186,84,Defender
+Belgium,Jordan Lukaku,25/07/1994,21,Oostende,BEL,4,186,83,Defender
+Belgium,Laurent Ciman,05/08/1985,30,Montreal,CAN,12,184,70,Defender
+Belgium,Radja Nainggolan,04/05/1988,28,Roma,ITA,21,176,65,Midfield
+Belgium,Axel Witsel,12/01/1989,27,Zenit,RUS,70,186,73,Midfield
+Belgium,Kevin De Bruyne,28/06/1991,24,Man. City,ENG,43,181,68,Midfield
+Belgium,Marouane Fellaini,22/11/1987,28,Man. United,ENG,71,194,85,Midfield
+Belgium,Eden Hazard,07/01/1991,25,Chelsea,ENG,67,173,74,Midfield
+Belgium,Yannick Carrasco,04/09/1993,22,Atlético,ESP,6,180,67,Midfield
+Belgium,Mousa Dembélé,16/07/1987,28,Tottenham,ENG,65,185,82,Midfield
+Belgium,Romelu Lukaku,13/05/1993,23,Everton,ENG,47,190,93,Forward
+Belgium,Dries Mertens,06/05/1987,29,Napoli,ITA,48,169,61,Forward
+Belgium,Divock Origi,18/04/1995,21,Liverpool,ENG,21,185,75,Forward
+Belgium,Christian Benteke,03/12/1990,25,Liverpool,ENG,28,190,83,Forward
+Belgium,Michy Batshuayi,02/10/1993,22,Marseille,FRA,5,185,78,Forward
+Croatia,Ivan Vargić,15/03/1987,29,Rijeka,CRO,2,192,90,Goalkeeper
+Croatia,Lovre Kalinić,03/04/1990,26,Hajduk Split,CRO,4,201,96,Goalkeeper
+Croatia,Danijel Subašić,27/10/1984,31,Monaco,FRA,24,191,87,Goalkeeper
+Croatia,Šime Vrsaljko,10/01/1992,24,Sassuolo,ITA,21,183,75,Defender
+Croatia,Ivan Strinić,17/07/1987,28,Napoli,ITA,37,186,78,Defender
+Croatia,Vedran Ćorluka,05/02/1986,30,Lokomotiv Moskva,RUS,90,192,84,Defender
+Croatia,Tin Jedvaj,28/11/1995,20,Leverkusen,GER,4,184,80,Defender
+Croatia,Darijo Srna,01/05/1982,34,Shakhtar Donetsk,UKR,132,178,78,Defender
+Croatia,Gordon Schildenfeld,18/03/1985,31,Dinamo Zagreb,CRO,29,191,89,Defender
+Croatia,Domagoj Vida,29/04/1989,27,Dynamo Kyiv,UKR,40,184,73,Defender
+Croatia,Ivan Perišić,02/02/1989,27,Internazionale,ITA,50,187,80,Midfield
+Croatia,Ivan Rakitić,10/03/1988,28,Barcelona,ESP,78,184,78,Midfield
+Croatia,Mateo Kovačić,06/05/1994,22,Real Madrid,ESP,29,178,77,Midfield
+Croatia,Luka Modrić,09/09/1985,30,Real Madrid,ESP,91,174,65,Midfield
+Croatia,Marcelo Brozović,16/11/1992,23,Internazionale,ITA,19,181,68,Midfield
+Croatia,Marko Rog,19/07/1995,20,Dinamo Zagreb,CRO,4,180,73,Midfield
+Croatia,Ante Ćorić,14/04/1997,19,Dinamo Zagreb,CRO,2,172,78,Midfield
+Croatia,Milan Badelj,25/02/1989,27,Fiorentina,ITA,23,186,76,Midfield
+Croatia,Andrej Kramarić,19/06/1991,25,Hoffenheim,GER,13,177,70,Forward
+Croatia,Nikola Kalinić,05/01/1988,28,Fiorentina,ITA,30,187,80,Forward
+Croatia,Mario Mandžukić,21/05/1986,30,Juventus,ITA,67,190,85,Forward
+Croatia,Marko Pjaca,06/05/1995,21,Dinamo Zagreb,CRO,10,186,81,Forward
+Croatia,Duje Čop,01/02/1990,26,Málaga,ESP,5,184,73,Forward
+Czech Republic,Petr Čech,20/05/1982,34,Arsenal,ENG,124,196,90,Goalkeeper
+Czech Republic,Tomáš Vaclík,29/03/1989,27,Basel,SUI,6,188,85,Goalkeeper
+Czech Republic,Tomáš Koubek,26/08/1992,23,Liberec,CZE,2,198,95,Goalkeeper
+Czech Republic,Pavel Kadeřábek,25/04/1992,24,Hoffenheim,GER,21,182,81,Defender
+Czech Republic,Michal Kadlec,13/12/1984,31,Fenerbahçe,TUR,65,185,76,Defender
+Czech Republic,Theodor Gebre Selassie,24/12/1986,29,Bremen,GER,37,181,71,Defender
+Czech Republic,Roman Hubník,06/06/1984,32,Plzeň,CZE,29,191,86,Defender
+Czech Republic,Tomáš Sivok,15/09/1983,32,Bursaspor,TUR,58,185,77,Defender
+Czech Republic,David Limberský,06/10/1983,32,Plzeň,CZE,40,179,79,Defender
+Czech Republic,Marek Suchý,29/03/1988,28,Basel,SUI,27,184,84,Defender
+Czech Republic,Bořek Dočkal,30/09/1988,27,Sparta Praha,CZE,25,182,72,Midfield
+Czech Republic,Tomáš Rosický,04/10/1980,35,Arsenal,ENG,105,178,65,Midfield
+Czech Republic,Daniel Pudil,27/09/1985,30,Sheff. Wednesday,ENG,33,185,81,Midfield
+Czech Republic,Jaroslav Plašil,05/01/1982,34,Bordeaux,FRA,103,182,72,Midfield
+Czech Republic,Daniel Kolář,27/10/1985,30,Plzeň,CZE,29,180,77,Midfield
+Czech Republic,David Pavelka,18/05/1991,25,Kasımpaşa,TUR,10,185,74,Midfield
+Czech Republic,Josef Šural,30/05/1990,26,Sparta Praha,CZE,14,184,81,Midfield
+Czech Republic,Ladislav Krejčí,05/07/1992,23,Sparta Praha,CZE,26,180,67,Midfield
+Czech Republic,Jiří Skalák,12/03/1992,24,Brighton,ENG,11,177,76,Midfield
+Czech Republic,Vladimír Darida,08/08/1990,25,Hertha,GER,39,171,74,Midfield
+Czech Republic,Tomáš Necid,13/08/1989,26,Bursaspor,TUR,42,190,81,Forward
+Czech Republic,Milan Škoda,16/01/1986,30,Slavia Praha,CZE,11,190,86,Forward
+Czech Republic,David Lafata,18/09/1981,34,Sparta Praha,CZE,41,180,72,Forward
+England,Joe Hart,19/04/1987,29,Man. City,ENG,62,196,89,Goalkeeper
+England,Fraser Forster,17/03/1988,28,Southampton,ENG,6,201,73,Goalkeeper
+England,Tom Heaton,15/04/1986,30,Burnley,ENG,1,188,85,Goalkeeper
+England,Kyle Walker,28/05/1990,26,Tottenham,ENG,18,178,70,Defender
+England,Danny Rose,02/07/1990,25,Tottenham,ENG,6,173,72,Defender
+England,Gary Cahill,19/12/1985,30,Chelsea,ENG,46,193,86,Defender
+England,Chris Smalling,22/11/1989,26,Man. United,ENG,28,192,81,Defender
+England,Nathaniel Clyne,05/04/1991,25,Liverpool,ENG,13,175,67,Defender
+England,John Stones,28/05/1994,22,Everton,ENG,10,188,70,Defender
+England,Ryan Bertrand,05/08/1989,26,Southampton,ENG,9,179,85,Defender
+England,James Milner,04/01/1986,30,Liverpool,ENG,61,175,70,Midfield
+England,Raheem Sterling,08/12/1994,21,Man. City,ENG,25,170,69,Midfield
+England,Adam Lallana,10/05/1988,28,Liverpool,ENG,26,172,73,Midfield
+England,Jordan Henderson,17/06/1990,26,Liverpool,ENG,27,182,67,Midfield
+England,Eric Dier,15/01/1994,22,Tottenham,ENG,10,188,88,Midfield
+England,Jack Wilshere,01/01/1992,24,Arsenal,ENG,33,172,65,Midfield
+England,Ross Barkley,05/12/1993,22,Everton,ENG,22,189,76,Midfield
+England,Dele Alli,11/04/1996,20,Tottenham,ENG,11,188,73,Midfield
+England,Harry Kane,28/07/1993,22,Tottenham,ENG,15,188,65,Forward
+England,Wayne Rooney,24/10/1985,30,Man. United,ENG,114,176,83,Forward
+England,Jamie Vardy,11/01/1987,29,Leicester,ENG,10,178,76,Forward
+England,Daniel Sturridge,01/09/1989,26,Liverpool,ENG,20,188,76,Forward
+England,Marcus Rashford,31/10/1997,18,Man. United,ENG,2,180,70,Forward
+France,Hugo Lloris,26/12/1986,29,Tottenham,ENG,78,188,73,Goalkeeper
+France,Steve Mandanda,28/03/1985,31,Marseille,FRA,22,185,82,Goalkeeper
+France,Benoît Costil,03/07/1987,28,Rennes,FRA,0,188,86,Goalkeeper
+France,Christophe Jallet,31/10/1983,32,Lyon,FRA,11,178,70,Defender
+France,Patrice Evra,15/05/1981,35,Juventus,ITA,76,174,74,Defender
+France,Adil Rami,27/12/1985,30,Sevilla,ESP,31,190,90,Defender
+France,Eliaquim Mangala,13/02/1991,25,Man. City,ENG,7,188,84,Defender
+France,Lucas Digne,20/07/1993,22,Roma,ITA,13,178,74,Defender
+France,Bacary Sagna,14/02/1983,33,Man. City,ENG,60,176,72,Defender
+France,Laurent Koscielny,10/09/1985,30,Arsenal,ENG,32,186,75,Defender
+France,Samuel Umtiti,14/11/1993,22,Lyon,FRA,0,180,75,Defender
+France,N'Golo Kanté,29/03/1991,25,Leicester,ENG,6,169,68,Midfield
+France,Yohan Cabaye,14/01/1986,30,Crystal Palace,ENG,47,174,71,Midfield
+France,Dimitri Payet,29/03/1987,29,West Ham,ENG,22,175,77,Midfield
+France,Morgan Schneiderlin,08/11/1989,26,Man. United,ENG,15,180,75,Midfield
+France,Blaise Matuidi,09/04/1987,29,Paris,FRA,47,175,70,Midfield
+France,Paul Pogba,15/03/1993,23,Juventus,ITA,34,191,84,Midfield
+France,Moussa Sissoko,16/08/1989,26,Newcastle,ENG,40,187,83,Midfield
+France,Kingsley Coman,13/06/1996,20,Bayern,GER,8,178,71,Midfield
+France,Antoine Griezmann,21/03/1991,25,Atlético,ESP,30,176,67,Forward
+France,Olivier Giroud,30/09/1986,29,Arsenal,ENG,51,192,88,Forward
+France,André-Pierre Gignac,05/12/1985,30,Tigres,MEX,29,187,84,Forward
+France,Anthony Martial,05/12/1995,20,Man. United,ENG,11,181,76,Forward
+Germany,Manuel Neuer,27/03/1986,30,Bayern,GER,68,193,92,Goalkeeper
+Germany,Bernd Leno,04/03/1992,24,Leverkusen,GER,1,190,83,Goalkeeper
+Germany,Marc-André ter Stegen,30/04/1992,24,Barcelona,ESP,6,187,85,Goalkeeper
+Germany,Shkodran Mustafi,17/04/1992,24,Valencia,ESP,11,184,82,Defender
+Germany,Jonas Hector,27/05/1990,26,Köln,GER,17,185,75,Defender
+Germany,Benedikt Höwedes,29/02/1988,28,Schalke,GER,37,187,82,Defender
+Germany,Mats Hummels,16/12/1988,27,Dortmund,GER,48,191,92,Defender
+Germany,Jonathan Tah,11/02/1996,20,Leverkusen,GER,1,-,-,Defender
+Germany,Jérôme Boateng,03/09/1988,27,Bayern,GER,62,192,90,Defender
+Germany,Joshua Kimmich,08/02/1995,21,Bayern,GER,2,176,70,Defender
+Germany,Sami Khedira,04/04/1987,29,Juventus,ITA,63,189,90,Midfield
+Germany,Bastian Schweinsteiger,01/08/1984,31,Man. United,ENG,117,183,79,Midfield
+Germany,Mesut Özil,15/10/1988,27,Arsenal,ENG,76,180,76,Midfield
+Germany,André Schürrle,06/11/1990,25,Wolfsburg,GER,55,184,74,Midfield
+Germany,Julian Draxler,20/09/1993,22,Wolfsburg,GER,21,187,72,Midfield
+Germany,Emre Can,12/01/1994,22,Liverpool,ENG,6,184,82,Midfield
+Germany,Julian Weigl,08/09/1995,20,Dortmund,GER,1,186,71,Midfield
+Germany,Toni Kroos,04/01/1990,26,Real Madrid,ESP,68,182,78,Midfield
+Germany,Mario Götze,03/06/1992,24,Bayern,GER,55,176,64,Midfield
+Germany,Leroy Sané,11/01/1996,20,Schalke,GER,3,183,75,Midfield
+Germany,Lukas Podolski,04/06/1985,31,Galatasaray,TUR,128,182,83,Forward
+Germany,Thomas Müller,13/09/1989,26,Bayern,GER,74,186,74,Forward
+Germany,Mario Gomez,10/07/1985,30,Beşiktaş,TUR,66,189,93,Forward
+Hungary,Gábor Király,01/04/1976,40,Haladás,HUN,104,190,85,Goalkeeper
+Hungary,Dénes Dibusz,16/11/1990,25,Ferencváros,HUN,4,188,81,Goalkeeper
+Hungary,Péter Gulácsi,06/05/1990,26,Leipzig,GER,3,190,83,Goalkeeper
+Hungary,Ádám Lang,17/01/1993,23,Videoton,HUN,13,185,77,Defender
+Hungary,Mihály Korhut,01/12/1988,27,Debrecen,HUN,5,181,76,Defender
+Hungary,Tamás Kádár,14/03/1990,26,Lech,POL,31,188,79,Defender
+Hungary,Attila Fiola,17/02/1990,26,Puskás Akadémia,HUN,16,182,70,Defender
+Hungary,Ádám Pintér,12/06/1988,28,Ferencváros,HUN,21,190,76,Defender
+Hungary,Richárd Guzmics,16/04/1987,29,Wisła,POL,16,190,80,Defender
+Hungary,Barnabás Bese,06/05/1994,22,MTK,HUN,1,188,84,Defender
+Hungary,Roland Juhász,01/07/1983,32,Videoton,HUN,92,194,96,Defender
+Hungary,Ákos Elek,21/07/1988,27,Diósgyőr,HUN,38,193,91,Midfield
+Hungary,Ádám Nagy,17/06/1995,21,Ferencváros,HUN,10,178,74,Midfield
+Hungary,Gergő Lovrencsics,01/09/1988,27,Lech,POL,12,177,79,Midfield
+Hungary,László Kleinheisler,08/04/1994,22,Bremen,GER,7,173,70,Midfield
+Hungary,Zoltán Stieber,16/10/1988,27,Nürnberg,GER,14,175,67,Midfield
+Hungary,Balázs Dzsudzsák,23/12/1986,29,Bursaspor,TUR,79,179,72,Forward
+Hungary,Ádám Szalai,09/12/1987,28,Hannover,GER,33,193,91,Forward
+Hungary,Zoltán Gera,22/04/1979,37,Ferencváros,HUN,90,183,75,Forward
+Hungary,Krisztián Németh,05/01/1989,27,Al-Gharafa,QAT,24,180,74,Forward
+Hungary,Dániel Böde,24/10/1986,29,Ferencváros,HUN,13,185,77,Forward
+Hungary,Nemanja Nikolić,31/12/1987,28,Legia,POL,19,180,80,Forward
+Hungary,Tamás Priskin,27/09/1986,29,Slovan Bratislava,SVK,57,189,90,Forward
+Iceland,Hannes Halldórsson,27/04/1984,32,Bodø/Glimt,NOR,35,193,87,Goalkeeper
+Iceland,Ögmundur Kristinsson,19/06/1989,27,Hammarby,SWE,11,192,89,Goalkeeper
+Iceland,Ingvar Jónsson,18/10/1989,26,Sandefjord,NOR,5,188,82,Goalkeeper
+Iceland,Birkir Sævarsson,11/11/1984,31,Hammarby,SWE,59,187,81,Defender
+Iceland,Haukur Heidar Hauksson,01/09/1991,24,AIK,SWE,7,187,79,Defender
+Iceland,Hjörtur Hermannsson,08/02/1995,21,Göteborg,SWE,3,189,81,Defender
+Iceland,Sverrir Ingason,05/08/1993,22,Lokeren,BEL,6,188,83,Defender
+Iceland,Ragnar Sigurdsson,19/06/1986,30,Krasnodar,RUS,58,187,77,Defender
+Iceland,Elmar Bjarnason,04/03/1987,29,AGF,DEN,28,183,78,Defender
+Iceland,Hordur Magnússon,11/02/1993,23,Cesena,ITA,5,190,81,Defender
+Iceland,Arnor Ingvi Traustason,30/04/1993,23,Norrköping,SWE,7,183,74,Defender
+Iceland,Ari Skúlason,14/05/1987,29,OB,DEN,40,170,65,Defender
+Iceland,Birkir Bjarnason,27/05/1988,28,Basel,SUI,49,182,75,Midfield
+Iceland,Gylfi Sigurdsson,08/09/1989,26,Swansea,ENG,41,186,77,Midfield
+Iceland,Kári Árnason,13/10/1982,33,Malmö,SWE,49,190,79,Midfield
+Iceland,Rúnar Már Sigurjónsson,18/06/1990,26,Sundsvall,SWE,11,178,78,Midfield
+Iceland,Aron Gunnarsson,22/04/1989,27,Cardiff,WAL,61,178,70,Midfield
+Iceland,Emil Hallfredsson,29/06/1984,31,Udinese,ITA,55,185,83,Midfield
+Iceland,Johann Gudmundsson,27/10/1990,25,Charlton,ENG,49,178,72,Forward
+Iceland,Kolbeinn Sigthórsson,14/03/1990,26,Nantes,FRA,41,185,70,Forward
+Iceland,Alfred Finnbogason,01/02/1989,27,Augsburg,GER,36,184,78,Forward
+Iceland,Jón Dadi Bödvarsson,25/05/1992,24,Kaiserslautern,GER,23,190,85,Forward
+Iceland,Eidur Gudjohnsen,15/09/1978,37,Molde,NOR,87,185,82,Forward
+Italy,Gianluigi Buffon,28/01/1978,38,Juventus,ITA,158,192,91,Goalkeeper
+Italy,Salvatore Sirigu,12/01/1987,29,Paris,FRA,16,192,80,Goalkeeper
+Italy,Federico Marchetti,07/02/1983,33,Lazio,ITA,11,188,73,Goalkeeper
+Italy,Mattia De Sciglio,20/10/1992,23,Milan,ITA,23,183,74,Defender
+Italy,Giorgio Chiellini,14/08/1984,31,Juventus,ITA,86,187,86,Defender
+Italy,Matteo Darmian,02/12/1989,26,Man. United,ENG,23,182,70,Defender
+Italy,Angelo Ogbonna,23/05/1988,28,West Ham,ENG,11,191,86,Defender
+Italy,Andrea Barzagli,08/05/1981,35,Juventus,ITA,58,187,87,Defender
+Italy,Leonardo Bonucci,01/05/1987,29,Juventus,ITA,59,190,86,Defender
+Italy,Antonio Candreva,28/02/1987,29,Lazio,ITA,40,180,70,Midfield
+Italy,Alessandro Florenzi,11/03/1991,25,Roma,ITA,18,173,67,Midfield
+Italy,Thiago Motta,28/08/1982,33,Paris,FRA,28,183,82,Midfield
+Italy,Stefano Sturaro,09/03/1993,23,Juventus,ITA,2,178,78,Midfield
+Italy,Daniele De Rossi,24/07/1983,32,Roma,ITA,105,184,83,Midfield
+Italy,Marco Parolo,25/01/1985,31,Lazio,ITA,22,184,75,Midfield
+Italy,Federico Bernardeschi,16/02/1994,22,Fiorentina,ITA,4,183,75,Midfield
+Italy,Emanuele Giaccherini,05/05/1985,31,Bologna,ITA,27,167,60,Midfield
+Italy,Simone Zaza,25/06/1991,24,Juventus,ITA,12,186,83,Forward
+Italy,Graziano Pellè,15/07/1985,30,Southampton,ENG,15,194,84,Forward
+Italy,Ciro Immobile,20/02/1990,26,Torino,ITA,14,185,78,Forward
+Italy,Éder,15/11/1986,29,Internazionale,ITA,12,179,72,Forward
+Italy,Lorenzo Insigne,04/06/1991,25,Napoli,ITA,9,163,59,Forward
+Italy,Stephan El Shaarawy,27/10/1992,23,Roma,ITA,19,178,72,Forward
+Northern Ireland,Michael McGovern,12/07/1984,31,Hamilton,SCO,14,191,89,Goalkeeper
+Northern Ireland,Roy Carroll,30/09/1977,38,Linfield,NIR,44,188,80,Goalkeeper
+Northern Ireland,Alan Mannus,19/05/1982,34,St Johnstone,SCO,8,188,84,Goalkeeper
+Northern Ireland,Conor McLaughlin,26/07/1991,24,Fleetwood,ENG,19,183,71,Defender
+Northern Ireland,Gareth McAuley,05/12/1979,36,West Brom,ENG,64,195,90,Defender
+Northern Ireland,Jonny Evans,03/01/1988,28,West Brom,ENG,52,188,77,Defender
+Northern Ireland,Chris Baird,25/02/1982,34,Fulham,ENG,79,181,74,Defender
+Northern Ireland,Luke McCullough,15/02/1994,22,Doncaster,ENG,5,185,81,Defender
+Northern Ireland,Paddy McNair,27/04/1995,21,Man. United,ENG,11,183,72,Defender
+Northern Ireland,Aaron Hughes,08/11/1979,36,Melbourne City,AUS,102,183,78,Defender
+Northern Ireland,Craig Cathcart,06/02/1989,27,Watford,ENG,31,188,73,Defender
+Northern Ireland,Lee Hodson,02/10/1991,24,MK Dons,ENG,16,174,71,Defender
+Northern Ireland,Shane Ferguson,12/07/1991,24,Millwall,ENG,26,176,65,Midfield
+Northern Ireland,Steven Davis,01/01/1985,31,Southampton,ENG,86,172,72,Midfield
+Northern Ireland,Corry Evans,30/07/1990,25,Blackburn,ENG,36,173,70,Midfield
+Northern Ireland,Stuart Dallas,19/04/1991,25,Leeds,ENG,16,186,81,Midfield
+Northern Ireland,Oliver Norwood,12/04/1991,25,Reading,ENG,37,180,76,Midfield
+Northern Ireland,Jamie Ward,12/05/1986,30,Nottm Forest,ENG,25,165,68,Midfield
+Northern Ireland,Josh Magennis,15/08/1990,25,Kilmarnock,SCO,21,188,92,Midfield
+Northern Ireland,Niall McGinn,20/07/1987,28,Aberdeen,SCO,44,183,70,Forward
+Northern Ireland,Will Grigg,03/07/1991,24,Wigan,ENG,8,180,70,Forward
+Northern Ireland,Kyle Lafferty,16/09/1987,28,Birmingham,ENG,53,193,88,Forward
+Northern Ireland,Conor Washington,18/05/1992,24,QPR,ENG,7,178,74,Forward
+Poland,Wojciech Szczęsny,18/04/1990,26,Roma,ITA,27,196,84,Goalkeeper
+Poland,Artur Boruc,20/02/1980,36,Bournemouth,ENG,63,193,88,Goalkeeper
+Poland,Łukasz Fabiański,18/04/1985,31,Swansea,ENG,32,190,83,Goalkeeper
+Poland,Michał Pazdan,21/09/1987,28,Legia,POL,18,181,78,Defender
+Poland,Artur Jędrzejczyk,04/11/1987,28,Legia,POL,21,189,78,Defender
+Poland,Thiago Cionek,21/04/1986,30,Palermo,ITA,7,184,80,Defender
+Poland,Jakub Wawrzyniak,07/07/1983,32,Lechia,POL,46,188,85,Defender
+Poland,Kamil Glik,03/02/1988,28,Torino,ITA,44,190,80,Defender
+Poland,Bartosz Salamon,01/05/1991,25,Cagliari,ITA,8,196,89,Defender
+Poland,Łukasz Piszczek,03/06/1985,31,Dortmund,GER,48,184,79,Defender
+Poland,Krzysztof Mączyński,23/05/1987,29,Wisła,POL,18,175,66,Midfield
+Poland,Tomasz Jodłowiec,08/09/1985,30,Legia,POL,46,189,91,Midfield
+Poland,Karol Linetty,02/02/1995,21,Lech,POL,10,176,74,Midfield
+Poland,Grzegorz Krychowiak,29/01/1990,26,Sevilla,ESP,37,186,83,Midfield
+Poland,Kamil Grosicki,08/06/1988,28,Rennes,FRA,41,180,78,Midfield
+Poland,Jakub Błaszczykowski,14/12/1985,30,Fiorentina,ITA,82,176,77,Midfield
+Poland,Sławomir Peszko,19/02/1985,31,Lechia,POL,39,173,70,Midfield
+Poland,Piotr Zieliński,20/05/1994,22,Empoli,ITA,16,177,64,Midfield
+Poland,Bartosz Kapustka,23/12/1996,19,,,10,179,60,Midfield
+Poland,Filip Starzyński,27/05/1991,25,Zagłębie,POL,4,184,72,Midfield
+Poland,Arkadiusz Milik,28/02/1994,22,Ajax,NED,29,186,78,Forward
+Poland,Robert Lewandowski,21/08/1988,27,Bayern,GER,79,184,78,Forward
+Poland,Mariusz Stępiński,12/05/1995,21,Ruch,POL,2,183,73,Forward
+Portugal,Rui Patrício,15/02/1988,28,Sporting CP,POR,47,190,84,Goalkeeper
+Portugal,Anthony Lopes,01/10/1990,25,Lyon,FRA,4,184,81,Goalkeeper
+Portugal,Eduardo,19/09/1982,33,Dinamo Zagreb,CRO,35,188,89,Goalkeeper
+Portugal,Bruno Alves,27/11/1981,34,Fenerbahçe,TUR,85,189,83,Defender
+Portugal,Pepe,26/02/1983,33,Real Madrid,ESP,73,188,81,Defender
+Portugal,José Fonte,22/12/1983,32,Southampton,ENG,12,187,81,Defender
+Portugal,Raphael Guerreiro,22/12/1993,22,Lorient,FRA,9,170,67,Defender
+Portugal,Ricardo Carvalho,18/05/1978,38,Monaco,FRA,88,183,78,Defender
+Portugal,Eliseu,01/10/1983,32,Benfica,POR,16,180,75,Defender
+Portugal,Cédric,31/08/1991,24,Southampton,ENG,11,172,67,Defender
+Portugal,João Moutinho,08/09/1986,29,Monaco,FRA,86,171,61,Midfield
+Portugal,João Mário,19/01/1993,23,Sporting CP,POR,13,179,73,Midfield
+Portugal,Vieirinha,24/01/1986,30,Wolfsburg,GER,24,172,73,Midfield
+Portugal,Danilo,09/09/1991,24,Porto,POR,13,188,83,Midfield
+Portugal,William Carvalho,07/04/1992,24,Sporting CP,POR,21,187,83,Midfield
+Portugal,André Gomes,30/07/1993,22,Valencia,ESP,10,188,84,Midfield
+Portugal,Renato Sanches,18/08/1997,18,Benfica,POR,6,176,70,Midfield
+Portugal,Rafa Silva,17/05/1993,23,Braga,POR,9,170,63,Midfield
+Portugal,Adrien Silva,15/03/1989,27,Sporting CP,POR,9,175,69,Midfield
+Portugal,Cristiano Ronaldo,05/02/1985,31,Real Madrid,ESP,128,185,80,Forward
+Portugal,Éder,22/12/1987,28,LOSC,FRA,28,188,81,Forward
+Portugal,Nani,17/11/1986,29,Fenerbahçe,TUR,98,175,66,Forward
+Portugal,Ricardo Quaresma,26/09/1983,32,Beşiktaş,TUR,52,175,67,Forward
+Republic of Ireland,Keiren Westwood,23/10/1984,31,Sheff. Wednesday,ENG,17,187,92,Goalkeeper
+Republic of Ireland,Shay Given,20/04/1976,40,Stoke,ENG,133,185,84,Goalkeeper
+Republic of Ireland,Darren Randolph,12/05/1987,29,West Ham,ENG,11,188,98,Goalkeeper
+Republic of Ireland,Seamus Coleman,11/10/1988,27,Everton,ENG,36,177,67,Defender
+Republic of Ireland,Ciaran Clark,26/09/1989,26,Aston Villa,ENG,19,188,76,Defender
+Republic of Ireland,John O'Shea,30/04/1981,35,Sunderland,ENG,112,191,75,Defender
+Republic of Ireland,Richard Keogh,11/08/1986,29,Derby,ENG,12,188,87,Defender
+Republic of Ireland,Shane Duffy,01/01/1992,24,Blackburn,ENG,3,193,76,Defender
+Republic of Ireland,Cyrus Christie,30/09/1992,23,Derby,ENG,5,188,78,Defender
+Republic of Ireland,Stephen Ward,20/08/1985,30,Burnley,ENG,33,184,72,Defender
+Republic of Ireland,Glenn Whelan,13/01/1984,32,Stoke,ENG,72,180,79,Midfield
+Republic of Ireland,Aiden McGeady,04/04/1986,30,Sheff. Wednesday,ENG,83,177,71,Midfield
+Republic of Ireland,James McCarthy,12/11/1990,25,Everton,ENG,37,180,72,Midfield
+Republic of Ireland,James McClean,22/04/1989,27,West Brom,ENG,40,180,70,Midfield
+Republic of Ireland,Jeff Hendrick,31/01/1992,24,Derby,ENG,23,185,79,Midfield
+Republic of Ireland,David Meyler,29/05/1989,27,Hull,ENG,16,189,91,Midfield
+Republic of Ireland,Robbie Brady,14/01/1992,24,Norwich,ENG,25,175,69,Midfield
+Republic of Ireland,Wes Hoolahan,20/05/1982,34,Norwich,ENG,32,168,71,Midfield
+Republic of Ireland,Stephen Quinn,01/04/1986,30,Reading,ENG,15,168,60,Midfield
+Republic of Ireland,Shane Long,22/01/1987,29,Southampton,ENG,65,180,81,Forward
+Republic of Ireland,Robbie Keane,08/07/1980,35,LA Galaxy,USA,144,175,72,Forward
+Republic of Ireland,Jon Walters,20/09/1983,32,Stoke,ENG,39,183,79,Forward
+Republic of Ireland,Daryl Murphy,15/03/1983,33,Ipswich,ENG,20,191,88,Forward
+Romania,Costel Pantilimon,01/02/1987,29,Watford,ENG,21,203,96,Goalkeeper
+Romania,Ciprian Tătăruşanu,09/02/1986,30,Fiorentina,ITA,40,195,88,Goalkeeper
+Romania,Silviu Lung,04/06/1989,27,Astra,ROU,3,189,78,Goalkeeper
+Romania,Alexandru Măţel,17/10/1989,26,Dinamo Zagreb,CRO,17,177,72,Defender
+Romania,Răzvan Raţ,26/05/1981,35,Rayo Vallecano,ESP,113,178,72,Defender
+Romania,Cosmin Moţi,03/12/1984,31,Ludogorets,BUL,8,183,74,Defender
+Romania,Vlad Chiricheş,14/11/1989,26,Napoli,ITA,44,184,75,Defender
+Romania,Valerică Găman,25/02/1989,27,Astra,ROU,14,188,72,Defender
+Romania,Steliano Filip,15/05/1994,22,Dinamo Bucureşti,ROU,5,177,73,Defender
+Romania,Dragoş Grigore,07/09/1986,29,Al-Sailiya,QAT,23,185,76,Defender
+Romania,Cristian Săpunaru,05/04/1984,32,Pandurii,ROU,16,187,81,Defender
+Romania,Ovidiu Hoban,27/12/1982,33,H. Beer-Sheva,ISR,23,182,80,Midfield
+Romania,Alexandru Chipciu,18/05/1989,27,Steaua,ROU,24,177,74,Midfield
+Romania,Mihai Pintilii,09/11/1984,31,Steaua,ROU,34,180,78,Midfield
+Romania,Nicolae Stanciu,07/05/1993,23,Steaua,ROU,7,170,69,Midfield
+Romania,Gabriel Torje,22/11/1989,26,Osmanlıspor,TUR,54,168,71,Midfield
+Romania,Lucian Sânmărtean,13/03/1980,36,Al-Ittihad,KSA,21,175,70,Midfield
+Romania,Andrei Prepeliţă,08/12/1985,30,Ludogorets,BUL,12,178,79,Midfield
+Romania,Adrian Popa,24/07/1988,27,Steaua,ROU,16,169,71,Midfield
+Romania,Denis Alibec,05/01/1991,25,Astra,ROU,6,187,77,Forward
+Romania,Claudiu Keșerü,02/12/1986,29,Ludogorets,BUL,14,178,71,Forward
+Romania,Florin Andone,11/04/1993,23,Córdoba,ESP,9,182,78,Forward
+Romania,Bogdan Stancu,28/06/1987,28,Gençlerbirliği,TUR,44,183,75,Forward
+Russia,Igor Akinfeev,08/04/1986,30,CSKA Moskva,RUS,89,186,82,Goalkeeper
+Russia,Yuri Lodygin,26/05/1990,26,Zenit,RUS,11,187,82,Goalkeeper
+Russia,Guilherme,12/12/1985,30,Lokomotiv Moskva,RUS,2,197,78,Goalkeeper
+Russia,Roman Shishkin,27/01/1987,29,Lokomotiv Moskva,RUS,11,176,73,Defender
+Russia,Igor Smolnikov,08/08/1988,27,Zenit,RUS,17,178,70,Defender
+Russia,Sergei Ignashevich,14/07/1979,36,CSKA Moskva,RUS,119,187,84,Defender
+Russia,Roman Neustädter,18/02/1988,28,Schalke,GER,5,190,83,Defender
+Russia,Aleksei Berezutski,20/06/1982,34,CSKA Moskva,RUS,56,190,87,Defender
+Russia,Vasili Berezutski,20/06/1982,34,CSKA Moskva,RUS,98,189,87,Defender
+Russia,Georgi Schennikov,27/04/1991,25,CSKA Moskva,RUS,10,180,75,Defender
+Russia,Dmitri Kombarov,22/01/1987,29,Spartak Moskva,RUS,39,181,72,Defender
+Russia,Artur Yusupov,01/09/1989,26,Zenit,RUS,2,180,73,Midfield
+Russia,Denis Glushakov,27/01/1987,29,Spartak Moskva,RUS,46,182,80,Midfield
+Russia,Pavel Mamaev,17/09/1988,27,Krasnodar,RUS,15,178,70,Midfield
+Russia,Aleksandr Golovin,30/05/1996,20,CSKA Moskva,RUS,8,180,69,Midfield
+Russia,Roman Shirokov,06/07/1981,34,CSKA Moskva,RUS,56,183,80,Midfield
+Russia,Oleg Shatov,29/07/1990,25,Zenit,RUS,25,173,73,Midfield
+Russia,Oleg Ivanov,04/08/1986,29,Terek,RUS,5,192,87,Midfield
+Russia,Aleksandr Samedov,19/07/1984,31,Lokomotiv Moskva,RUS,30,177,75,Midfield
+Russia,Dmitri Torbinski,28/04/1984,32,Krasnodar,RUS,30,172,60,Midfield
+Russia,Aleksandr Kokorin,19/03/1991,25,Zenit,RUS,41,181,74,Forward
+Russia,Fedor Smolov,09/02/1990,26,Krasnodar,RUS,17,187,80,Forward
+Russia,Artem Dzyuba,22/08/1988,27,Zenit,RUS,21,196,91,Forward
+Slovakia,Ján Mucha,05/12/1982,33,Slovan Bratislava,SVK,46,189,90,Goalkeeper
+Slovakia,Ján Novota,29/11/1983,32,Rapid Wien,AUT,3,197,90,Goalkeeper
+Slovakia,Matúš Kozáčik,27/12/1983,32,Plzeň,CZE,20,193,88,Goalkeeper
+Slovakia,Peter Pekarík,30/10/1986,29,Hertha,GER,70,176,70,Defender
+Slovakia,Martin Škrtel,15/12/1984,31,Liverpool,ENG,84,193,81,Defender
+Slovakia,Ján Ďurica,10/12/1981,34,Lokomotiv Moskva,RUS,83,188,86,Defender
+Slovakia,Norbert Gyömber,03/07/1992,23,Roma,ITA,14,189,74,Defender
+Slovakia,Milan Škriniar,11/02/1995,21,Sampdoria,ITA,3,187,80,Defender
+Slovakia,Tomáš Hubočan,17/09/1985,30,Dinamo Moskva,RUS,46,184,70,Defender
+Slovakia,Kornel Saláta,24/01/1985,31,Slovan Bratislava,SVK,37,191,89,Defender
+Slovakia,Dušan Švento,01/08/1985,30,Köln,GER,42,178,70,Defender
+Slovakia,Ján Greguš,29/01/1991,25,Jablonec,CZE,7,189,70,Midfield
+Slovakia,Vladimír Weiss,30/11/1989,26,Al-Gharafa,QAT,55,173,71,Midfield
+Slovakia,Ondrej Duda,05/12/1994,21,Legia,POL,14,181,74,Midfield
+Slovakia,Miroslav Stoch,19/10/1989,26,Bursaspor,TUR,55,169,66,Midfield
+Slovakia,Patrik Hrošovský,22/04/1992,24,Plzeň,CZE,13,172,68,Midfield
+Slovakia,Marek Hamšík,27/07/1987,28,Napoli,ITA,90,183,79,Midfield
+Slovakia,Juraj Kucka,26/02/1987,29,Milan,ITA,50,186,86,Midfield
+Slovakia,Róbert Mak,08/03/1991,25,PAOK,GRE,30,179,78,Midfield
+Slovakia,Viktor Pečovský,24/05/1983,33,Žilina,SVK,34,171,74,Midfield
+Slovakia,Stanislav Šesták,16/12/1982,33,Ferencváros,HUN,65,180,74,Forward
+Slovakia,Adam Nemec,02/09/1985,30,Willem II,NED,24,190,84,Forward
+Slovakia,Michal Ďuriš,01/06/1988,28,Plzeň,CZE,28,183,75,Forward
+Spain,Iker Casillas,20/05/1981,35,Porto,POR,167,185,84,Goalkeeper
+Spain,David de Gea,07/11/1990,25,Man. United,ENG,12,192,76,Goalkeeper
+Spain,Sergio Rico,01/09/1993,22,Sevilla,ESP,1,195,90,Goalkeeper
+Spain,César Azpilicueta,28/08/1989,26,Chelsea,ENG,16,178,75,Defender
+Spain,Gerard Piqué,02/02/1987,29,Barcelona,ESP,80,193,85,Defender
+Spain,Marc Bartra,15/01/1991,25,Barcelona,ESP,9,183,74,Defender
+Spain,Héctor Bellerín,19/03/1995,21,Arsenal,ENG,3,177,74,Defender
+Spain,Sergio Ramos,30/03/1986,30,Real Madrid,ESP,134,183,75,Defender
+Spain,Juanfran,09/01/1985,31,Atlético,ESP,20,180,72,Defender
+Spain,Mikel San José,30/05/1989,27,Athletic,ESP,7,186,77,Defender
+Spain,Jordi Alba,21/03/1989,27,Barcelona,ESP,46,170,68,Defender
+Spain,Sergio Busquets,16/07/1988,27,Barcelona,ESP,86,189,76,Midfield
+Spain,Andrés Iniesta,11/05/1984,32,Barcelona,ESP,111,171,68,Midfield
+Spain,Koke,08/01/1992,24,Atlético,ESP,23,178,74,Midfield
+Spain,Cesc Fàbregas,04/05/1987,29,Chelsea,ENG,109,175,74,Midfield
+Spain,Thiago Alcántara,11/04/1991,25,Bayern,GER,12,172,71,Midfield
+Spain,Bruno Soriano,12/06/1984,32,Villarreal,ESP,10,184,73,Midfield
+Spain,David Silva,08/01/1986,30,Man. City,ENG,102,173,67,Midfield
+Spain,Álvaro Morata,23/10/1992,23,Juventus,ITA,12,189,85,Forward
+Spain,Lucas Vázquez,01/07/1991,24,Real Madrid,ESP,1,173,70,Forward
+Spain,Pedro Rodríguez,28/07/1987,28,Chelsea,ENG,58,167,62,Forward
+Spain,Aritz Aduriz,11/02/1981,35,Athletic,ESP,8,181,75,Forward
+Spain,Nolito,15/10/1986,29,Celta,ESP,12,175,65,Forward
+Sweden,Andreas Isaksson,03/10/1981,34,Kasımpaşa,TUR,132,200,86,Goalkeeper
+Sweden,Robin Olsen,08/01/1990,26,København,DEN,4,198,89,Goalkeeper
+Sweden,Patrik Carlgren,08/01/1992,24,AIK,SWE,0,188,84,Goalkeeper
+Sweden,Mikael Lustig,13/12/1986,29,Celtic,SCO,53,189,78,Defender
+Sweden,Erik Johansson,30/12/1988,27,København,DEN,10,191,84,Defender
+Sweden,Andreas Granqvist,16/04/1985,31,Krasnodar,RUS,54,192,84,Defender
+Sweden,Martin Olsson,17/05/1988,28,Norwich,ENG,36,170,81,Defender
+Sweden,Pontus Jansson,13/02/1991,25,Torino,ITA,6,194,89,Defender
+Sweden,Victor Lindelöf,17/07/1994,21,Benfica,POR,5,187,80,Defender
+Sweden,Ludwig Augustinsson,21/04/1994,22,København,DEN,3,181,74,Defender
+Sweden,Emil Forsberg,23/10/1991,24,Leipzig,GER,19,179,78,Midfield
+Sweden,Sebastian Larsson,06/06/1985,31,Sunderland,ENG,86,178,70,Midfield
+Sweden,Albin Ekdal,28/07/1989,26,Hamburg,GER,24,186,75,Midfield
+Sweden,Kim Källström,24/08/1982,33,Grasshoppers,SUI,130,185,87,Midfield
+Sweden,Oscar Hiljemark,28/06/1992,23,Palermo,ITA,9,184,75,Midfield
+Sweden,Pontus Wernbloom,25/06/1986,29,CSKA Moskva,RUS,50,187,85,Midfield
+Sweden,Oscar Lewicki,14/07/1992,23,Malmö,SWE,11,171,68,Midfield
+Sweden,Jimmy Durmaz,22/03/1989,27,Olympiacos,GRE,31,180,69,Midfield
+Sweden,Erkan Zengin,05/08/1985,30,Trabzonspor,TUR,20,180,72,Midfield
+Sweden,Zlatan Ibrahimović,03/10/1981,34,Paris,FRA,115,195,95,Forward
+Sweden,Marcus Berg,17/08/1986,29,Panathinaikos,GRE,39,184,75,Forward
+Sweden,Emir Kujovic,22/06/1988,28,Norrköping,SWE,2,194,87,Forward
+Sweden,John Guidetti,15/04/1992,24,Celta,ESP,11,185,79,Forward
+Switzerland,Yann Sommer,17/12/1988,27,Mönchengladbach,GER,21,183,79,Goalkeeper
+Switzerland,Marwin Hitz,18/09/1987,28,Augsburg,GER,2,193,86,Goalkeeper
+Switzerland,Roman Bürki,14/11/1990,25,Dortmund,GER,5,187,85,Goalkeeper
+Switzerland,Stephan Lichtsteiner,16/01/1984,32,Juventus,ITA,84,182,75,Defender
+Switzerland,François Moubandje,21/06/1990,26,Toulouse,FRA,11,180,74,Defender
+Switzerland,Nico Elvedi,30/09/1996,19,Mönchengladbach,GER,1,188,83,Defender
+Switzerland,Steve von Bergen,10/06/1983,33,Young Boys,SUI,50,182,79,Defender
+Switzerland,Michael Lang,08/02/1991,25,Basel,SUI,19,185,79,Defender
+Switzerland,Ricardo Rodríguez,25/08/1992,23,Wolfsburg,GER,40,181,77,Defender
+Switzerland,Johan Djourou,18/01/1987,29,Hamburg,GER,63,191,87,Defender
+Switzerland,Fabian Schär,20/12/1991,24,Hoffenheim,GER,23,186,84,Defender
+Switzerland,Fabian Frei,08/01/1989,27,Mainz,GER,9,182,77,Midfield
+Switzerland,Granit Xhaka,27/09/1992,23,Mönchengladbach,GER,46,185,82,Midfield
+Switzerland,Valon Behrami,19/04/1985,31,Watford,ENG,69,185,78,Midfield
+Switzerland,Denis Zakaria,20/11/1996,19,Young Boys,SUI,2,191,76,Midfield
+Switzerland,Blerim Džemaili,12/04/1986,30,Genoa,ITA,51,179,73,Midfield
+Switzerland,Gelson Fernandes,02/09/1986,29,Rennes,FRA,58,179,70,Midfield
+Switzerland,Xherdan Shaqiri,10/10/1991,24,Stoke,ENG,56,169,72,Midfield
+Switzerland,Breel Embolo,14/02/1997,19,Basel,SUI,13,185,84,Forward
+Switzerland,Haris Seferović,22/02/1992,24,Frankfurt,GER,33,185,85,Forward
+Switzerland,Shani Tarashaj,07/02/1995,21,Grasshoppers,SUI,5,176,77,Forward
+Switzerland,Admir Mehmedi,16/03/1991,25,Leverkusen,GER,45,183,81,Forward
+Switzerland,Eren Derdiyok,12/06/1988,28,Kasımpaşa,TUR,52,191,90,Forward
+Turkey,Volkan Babacan,11/08/1988,27,İstanbul Başakşehir,TUR,20,192,86,Goalkeeper
+Turkey,Onur Kıvrak,01/01/1988,28,Trabzonspor,TUR,12,187,74,Goalkeeper
+Turkey,Harun Tekin,17/06/1989,27,Bursaspor,TUR,0,187,78,Goalkeeper
+Turkey,Semih Kaya,24/02/1991,25,Galatasaray,TUR,23,183,66,Defender
+Turkey,Hakan Balta,23/03/1983,33,Galatasaray,TUR,49,184,80,Defender
+Turkey,Ahmet Çalık,26/02/1994,22,Gençlerbirliği,TUR,4,184,77,Defender
+Turkey,Gökhan Gönül,04/01/1985,31,Fenerbahçe,TUR,60,174,73,Defender
+Turkey,İsmail Köybaşı,10/07/1989,26,Beşiktaş,TUR,20,177,75,Defender
+Turkey,Caner Erkin,04/10/1988,27,Fenerbahçe,TUR,49,181,76,Defender
+Turkey,Şener Özbayraklı,23/01/1990,26,Fenerbahçe,TUR,8,171,71,Defender
+Turkey,Nuri Şahin,05/09/1988,27,Dortmund,GER,50,179,65,Midfield
+Turkey,Hakan Çalhanoğlu,08/02/1994,22,Leverkusen,GER,21,176,76,Midfield
+Turkey,Selçuk İnan,10/02/1985,31,Galatasaray,TUR,55,182,74,Midfield
+Turkey,Arda Turan,30/01/1987,29,Barcelona,ESP,94,178,76,Midfield
+Turkey,Olcay Şahan,26/05/1987,29,Beşiktaş,TUR,26,179,71,Midfield
+Turkey,Oğuzhan Özyakup,23/09/1992,23,Beşiktaş,TUR,23,180,75,Midfield
+Turkey,Mehmet Topal,03/03/1986,30,Fenerbahçe,TUR,62,187,82,Midfield
+Turkey,Ozan Tufan,23/03/1995,21,Fenerbahçe,TUR,27,179,70,Midfield
+Turkey,Yunus Mallı,24/02/1992,24,Mainz,GER,7,179,70,Midfield
+Turkey,Volkan Şen,07/07/1987,28,Fenerbahçe,TUR,19,175,68,Midfield
+Turkey,Cenk Tosun,07/06/1991,25,Beşiktaş,TUR,11,183,78,Forward
+Turkey,Burak Yılmaz,15/07/1985,30,Beijing Guoan,CHN,47,188,77,Forward
+Turkey,Emre Mor,24/07/1997,18,Nordsjælland,DEN,4,168,63,Forward
+Ukraine,Denys Boyko,29/01/1988,28,Beşiktaş,TUR,4,194,82,Goalkeeper
+Ukraine,Andriy Pyatov,28/06/1984,31,Shakhtar Donetsk,UKR,67,190,84,Goalkeeper
+Ukraine,Mykyta Shevchenko,26/01/1993,23,Zorya,UKR,0,187,80,Goalkeeper
+Ukraine,Bohdan Butko,13/01/1991,25,Amkar,RUS,18,180,68,Defender
+Ukraine,Yevhen Khacheridi,28/07/1987,28,Dynamo Kyiv,UKR,45,198,85,Defender
+Ukraine,Olexandr Kucher,22/10/1982,33,Shakhtar Donetsk,UKR,51,184,77,Defender
+Ukraine,Vyacheslav Shevchuk,13/05/1979,37,Shakhtar Donetsk,UKR,55,184,78,Defender
+Ukraine,Artem Fedetskiy,26/04/1985,31,Dnipro,UKR,52,183,76,Defender
+Ukraine,Yaroslav Rakitskiy,03/08/1989,26,Shakhtar Donetsk,UKR,42,180,70,Defender
+Ukraine,Anatoliy Tymoshchuk,30/03/1979,37,Kairat,KAZ,144,181,70,Midfield
+Ukraine,Taras Stepanenko,08/08/1989,26,Shakhtar Donetsk,UKR,32,181,75,Midfield
+Ukraine,Andriy Yarmolenko,23/10/1989,26,Dynamo Kyiv,UKR,62,189,81,Midfield
+Ukraine,Viktor Kovalenko,14/02/1996,20,Shakhtar Donetsk,UKR,6,182,75,Midfield
+Ukraine,Yevhen Konoplyanka,29/09/1989,26,Sevilla,ESP,56,176,69,Midfield
+Ukraine,Ruslan Rotan,29/10/1981,34,Dnipro,UKR,89,174,67,Midfield
+Ukraine,Serhiy Sydorchuk,02/05/1991,25,Dynamo Kyiv,UKR,14,189,90,Midfield
+Ukraine,Serhiy Rybalka,01/04/1990,26,Dynamo Kyiv,UKR,9,176,70,Midfield
+Ukraine,Denys Garmash,19/04/1990,26,Dynamo Kyiv,UKR,28,186,72,Midfield
+Ukraine, Olexandr Zinchenko,15/12/1996,19,Ufa,RUS,6,175,61,Midfield
+Ukraine,Olexandr Karavaev,02/06/1992,24,Zorya,UKR,3,173,65,Midfield
+Ukraine,Roman Zozulya,17/11/1989,26,Dnipro,UKR,29,176,72,Forward
+Ukraine,Yevhen Seleznyov,20/07/1985,30,Shakhtar Donetsk,UKR,52,188,85,Forward
+Ukraine,Pylyp Budkivskiy,10/03/1992,24,Zorya,UKR,6,196,81,Forward
+Wales,Wayne Hennessey,24/01/1987,29,Crystal Palace,ENG,59,198,90,Goalkeeper
+Wales,Owain Fôn Williams,17/03/1987,29,Inverness,SCO,1,193,77,Goalkeeper
+Wales,Danny Ward,22/06/1993,23,Liverpool,ENG,3,191,88,Goalkeeper
+Wales,Chris Gunter,21/07/1989,26,Reading,ENG,70,180,71,Defender
+Wales,Neil Taylor,07/02/1989,27,Swansea,ENG,31,175,64,Defender
+Wales,Ben Davies,24/04/1993,23,Tottenham,ENG,23,181,76,Defender
+Wales,James Chester,23/01/1989,27,West Brom,ENG,14,177,75,Defender
+Wales,Ashley Williams,23/08/1984,31,Swansea,ENG,62,183,71,Defender
+Wales,Jazz Richards,12/04/1991,25,Fulham,ENG,10,185,78,Defender
+Wales,James Collins,23/08/1983,32,West Ham,ENG,47,188,83,Defender
+Wales,Joe Allen,14/03/1990,26,Liverpool,ENG,28,168,62,Midfield
+Wales,Andy King,29/10/1988,27,Leicester,ENG,34,183,74,Midfield
+Wales,Aaron Ramsey,26/12/1990,25,Arsenal,ENG,42,178,76,Midfield
+Wales,David Edwards,03/02/1986,30,Wolves,ENG,35,183,78,Midfield
+Wales,Joe Ledley,23/01/1987,29,Crystal Palace,ENG,64,183,73,Midfield
+Wales,Jonathan Williams,09/10/1993,22,Crystal Palace,ENG,14,168,60,Midfield
+Wales,David Vaughan,18/02/1983,33,Nottm Forest,ENG,42,171,70,Midfield
+Wales,Hal Robson-Kanu,21/05/1989,27,Reading,ENG,32,183,83,Forward
+Wales,Gareth Bale,16/07/1989,26,Real Madrid,ESP,58,183,74,Forward
+Wales,George Williams,07/09/1995,20,Fulham,ENG,7,172,73,Forward
+Wales,David Cotterill,04/12/1987,28,Birmingham,ENG,23,175,71,Forward
+Wales,Sam Vokes,21/10/1989,26,Burnley,ENG,41,186,90,Forward
+Wales,Simon Church,10/12/1988,27,MK Dons,ENG,37,183,84,Forward
