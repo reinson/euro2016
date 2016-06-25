@@ -75,6 +75,12 @@ body {
 </div>
 
 <script src="d3.v3.js"></script>
+<script src="https://d3js.org/d3-force.v1.min.js"></script>
+<script src="https://d3js.org/d3-timer.v1.min.js"></script>
+<script src="https://d3js.org/d3-collection.v1.min.js"></script>
+
+<script src="https://d3js.org/d3-quadtree.v1.min.js"></script>
+
 <script src="//d3js.org/d3.geo.projection.v0.min.js"></script>
 <script src="//d3js.org/topojson.v1.min.js"></script>
 <script src="//d3js.org/queue.v1.min.js"></script>
@@ -145,12 +151,13 @@ queue()
 
 function draw_circles(){
     var menu_val = menu.property("value");
-    var players_to_draw = players.filter(function(d){return d.team == menu_val});
+    debugger;
+    var players_to_draw = players.filter(function(d){return d.key == menu_val});
 
   // var aaron = players.filter(function(d){return d.name == "Aaron Hughes"})[0];
    // console.log(projection(aaron.crds));
 
-    var circles = svg.selectAll("circle").data(players_to_draw,function(d){return d.name});
+    var circles = svg.selectAll("circle").data(players_to_draw[0].values,function(d){return d.name});
     circles.exit().remove();
     circles.enter()
         .append("circle")
@@ -195,9 +202,53 @@ function draw(error, world, players_from_file){
         d.lng = +d.lng;
         d.crds = [d.lng,d.lat];
         d.px_crds = projection(d.crds);
-        d.x = d.px_crds[0];
-        d.y = d.px_crds[1];
+        d.x = d.px_crds[0] + Math.random();
+        d.y = d.px_crds[1] + Math.random();
     });
+    debugger;
+
+    players = d3.nest()
+            .key(function(d){return d.team})
+            .entries(players);
+  /*  players = players.map(function(d){
+        return {
+            key: d.key,
+
+        }
+    })*/
+
+    var simulation = d3.forceSimulation()
+       // .force("x", d3.forceX(function(d) { return d.x; }).strength(0.02))
+       // .force("y", d3.forceY(function(d){return d.y;}).strength(0.02))
+        .force("collide", d3.forceCollide(3.5).strength(0.1))
+        //.stop();
+
+
+    players.forEach(function(d){
+        var links = [];
+        d.values.forEach(function(a,i){
+            d.values.forEach(function(b,j){
+                if(a.club == b.club && a!==b){
+                    links.push({
+                        source:i, target:j
+                    })
+                }
+
+            })
+        });
+        debugger;
+        simulation.nodes(d.values).force("link", d3.forceLink(links).distance(3).strength(1)).stop();
+
+        for (var i = 0; i < 200; ++i) simulation.tick();
+    });
+
+ /*   var simulation = d3.forceSimulation(players)
+        .force("x", d3.forceX(function(d) { return d.x; }).strength(1))
+        .force("y", d3.forceY(function(d){return d.y;}).strength(1))
+        .force("collide", d3.forceCollide(4))
+        .stop();
+//debugger;
+    for (var i = 0; i < 120; ++i) simulation.tick();*/
 
 //filter countries by id (Estonia 233)
 //  countries = countries.filter(function(d){return d.id==233});
@@ -208,13 +259,10 @@ function draw(error, world, players_from_file){
         .attr("class", "country")
         .attr("d", path);
 
-    var euro2016_countries = d3.set();
-    players.forEach(function(d){
-        euro2016_countries.add(d.team)
-    });
+    var euro2016_countries = players.map(function(d){return d.key});
 
     menu.selectAll("option")
-        .data(euro2016_countries.values()).enter()
+        .data(euro2016_countries).enter()
         .append("option")
         .text(function(d){return d});
 
