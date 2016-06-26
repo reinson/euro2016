@@ -88,8 +88,9 @@ body {
 
 var margin = 20,
     width = 900-2*margin,
-    height = 680-2*margin,
-    scale0 = (width - 1) / 2 / Math.PI;
+    height = 680-2*margin;
+var centerX = width/2 + margin/2,
+    centerY = height/2 + margin/2;
 
 var color = d3.scale.category10();
 var players;
@@ -159,9 +160,6 @@ function draw_circles(){
     var menu_val = menu.property("value");
     var players_to_draw = players.filter(function(d){return d.key == menu_val});
 
-  // var aaron = players.filter(function(d){return d.name == "Aaron Hughes"})[0];
-   // console.log(projection(aaron.crds));
-
     var nodes = svg.selectAll("circle")
                 .data(players_to_draw[0].values,function(d){return d.name+d.team});
 
@@ -217,11 +215,14 @@ function draw(error, world, players_from_file){
         d.lat = +d.lat;
         d.lng = +d.lng;
         d.crds = [d.lng,d.lat];
-        d.px_crds = projection(d.crds);
+        d.px_crds = custom_project(d.crds);
         d.x_px = d.px_crds[0] + Math.random();
         d.y_px = d.px_crds[1] + Math.random();
         d.r = 3;
     });
+
+    var robbie = players.filter(function(d){return d.name=="Robbie Keane"});
+    console.log(robbie);
 
     players = d3.nest()
             .key(function(d){return d.team})
@@ -290,13 +291,36 @@ function mouseover(d){
     tooltip.select("#club").text(function(){
         return d.club ? d.club + " (" + d.club_city + ", " + d.club_country + ")" : ""
     });
-    tooltip.style("top", (d3.event.pageY + 3 ) + "px")
+    tooltip.style("top", (d3.event.pageY - 40 ) + "px")
         .style("left", (d3.event.pageX + 3 ) + "px").classed("hidden",false);
     tooltip.classed("hidden",false);
 }
 
 function mouseout(){
     d3.select(".tooltip").classed("hidden",true);
+}
+
+function crosses_rect(x,y){
+    var dx = (x-centerX)/Math.abs(x-centerX),
+        dy = (y-centerY)/Math.abs(x-centerX);
+
+    var dh = Math.abs((width-centerX+margin/2)/dx),
+        dw = Math.abs((height-centerY+margin/2)/dy);
+
+    var k = d3.min([dh,dw]);
+
+    return [centerX + k*dx,centerY + k*dy];
+}
+
+function custom_project(crds){
+    var px_crds = projection(crds);
+    var px_x = px_crds[0],
+        px_y = px_crds[1];
+    if (px_x >= margin && px_x <= width-margin && px_y >= margin && px_y <= height-margin){
+        return px_crds;
+    }else{
+        return crosses_rect(px_crds[0],px_crds[1])
+    }
 }
 
 d3.select(self.frameElement).style("height", height + "px");
