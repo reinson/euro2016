@@ -101,6 +101,12 @@ var projection = d3.geo.azimuthalEquidistant()
     .clipExtent([[margin,margin],[width,height]])
     .precision(.1);
 
+var pack = d3.layout.pack()
+      .value(function(d) { return d.r; })
+      //.size([w, h])
+      .radius(function(d){return d})
+    .padding(1);
+
 var path = d3.geo.path()
     .projection(projection);
 
@@ -151,33 +157,43 @@ queue()
 
 function draw_circles(){
     var menu_val = menu.property("value");
-    debugger;
     var players_to_draw = players.filter(function(d){return d.key == menu_val});
 
   // var aaron = players.filter(function(d){return d.name == "Aaron Hughes"})[0];
    // console.log(projection(aaron.crds));
 
-    var circles = svg.selectAll("circle").data(players_to_draw[0].values,function(d){return d.name});
-    circles.exit().remove();
-    circles.enter()
-        .append("circle")
+    var nodes = svg.selectAll("circle")
+                .data(players_to_draw[0].values,function(d){return d.name+d.team});
+
+    var nodesEnter = nodes.enter()
+        .append("circle").attr("class","club")
         .attr("cx", function (d) { return d.x; })
         .attr("cy", function (d) { return d.y; })
-        .attr("r", "3px")
+        .attr("r", 0)
         .attr("opacity",0.7)
-        .attr("fill", "#3366cc")
-        .on("mouseover",function(d){debugger;
-            var tooltip = d3.select(".tooltip");
-            tooltip.select("#name").text(d.name);
-            tooltip.select("#club").text(d.club + " (" + d.club_city + ", " + d.club_country + ")");
-            tooltip.style("top", (d3.event.pageY + 3 ) + "px")
-                .style("left", (d3.event.pageX + 3 ) + "px").classed("hidden",false);
-            tooltip.classed("hidden",false);
-        })
-        .on("mouseout",function(){
-            d3.select(".tooltip").classed("hidden",true);
-        })
-        .on("click",function(d){console.log(d)});
+        .attr("stroke","#0b2a3f")
+        .attr("fill", "#d9ecf9")
+        .on("mouseover",mouseover)
+        .on("mouseout",mouseout)
+        .on("click",function(d){console.log(d)})
+        .each(function(d){
+             svg.append("g").attr("transform","translate(" +d.x+ "," +d.y+ ")")
+                .selectAll(".player").data(d.children,function(d){return d.name;}).enter()
+                .append("circle")
+                .attr("r",0)
+                .attr("class","player")
+                .attr("fill","#1f77b4")
+                .attr("cx", function (n) { return n.x; })
+                .attr("cy", function (n) { return n.y; })
+                .on("mouseover",mouseover)
+                .on("mouseout",mouseout)
+        });
+
+    nodesEnter.transition().delay(400).duration(400).attr("r", function(d){return d.r;});
+    svg.selectAll(".player").transition().delay(400).duration(500).attr("r", 3);
+
+    nodes.exit().transition().duration(400).attr("r",0).remove();
+
 }
 /*
 function zoomed(){
@@ -202,42 +218,31 @@ function draw(error, world, players_from_file){
         d.lng = +d.lng;
         d.crds = [d.lng,d.lat];
         d.px_crds = projection(d.crds);
-        d.x = d.px_crds[0] + Math.random();
-        d.y = d.px_crds[1] + Math.random();
+        d.x_px = d.px_crds[0] + Math.random();
+        d.y_px = d.px_crds[1] + Math.random();
+        d.r = 3;
     });
-    debugger;
 
     players = d3.nest()
             .key(function(d){return d.team})
             .entries(players);
-  /*  players = players.map(function(d){
+
+    players = players.map(function(d){
         return {
             key: d.key,
-
+            values: nest_by_club(d.values)
+            //x: d3.mean()
         }
-    })*/
+    });
 
     var simulation = d3.forceSimulation()
-       // .force("x", d3.forceX(function(d) { return d.x; }).strength(0.02))
-       // .force("y", d3.forceY(function(d){return d.y;}).strength(0.02))
-        .force("collide", d3.forceCollide(3.5).strength(0.05))
+        .force("collide", d3.forceCollide(function(d){return d.r + 1}).strength(0.05))
         .stop();
 
     players.forEach(function(d){
         simulation.nodes(d.values);
         for (var i = 0; i < 200; ++i) simulation.tick();
     });
-
- /*   var simulation = d3.forceSimulation(players)
-        .force("x", d3.forceX(function(d) { return d.x; }).strength(1))
-        .force("y", d3.forceY(function(d){return d.y;}).strength(1))
-        .force("collide", d3.forceCollide(4))
-        .stop();
-//debugger;
-    for (var i = 0; i < 120; ++i) simulation.tick();*/
-
-//filter countries by id (Estonia 233)
-//  countries = countries.filter(function(d){return d.id==233});
 
     svg.selectAll(".country")
         .data(countries)
@@ -254,8 +259,44 @@ function draw(error, world, players_from_file){
 
     draw_circles();
 
+}
 
+function nest_by_club(nodes){
+    nodes = d3.nest()
+            .key(function(d){return d.club})
+            .entries(nodes);
+    var packed = pack.nodes({name: "root",
+                    children: nodes.map(function(d){
+                        return {name: d.key,
+                                team: d.values[0].team,
+                                children: d.values}
+                    })
+    });
+    packed = packed.filter(function(d){return d.depth == 1});
+    packed.forEach(function(d){
+        d.children.forEach(function(player){
+            player.x = player.x - d.x;
+            player.y = player.y - d.y;
+        });
+        d.x = d.children[0].x_px;
+        d.y = d.children[0].y_px;
+    });
+    return packed;
+}
 
+function mouseover(d){
+    var tooltip = d3.select(".tooltip");
+    tooltip.select("#name").text(d.name);
+    tooltip.select("#club").text(function(){
+        return d.club ? d.club + " (" + d.club_city + ", " + d.club_country + ")" : ""
+    });
+    tooltip.style("top", (d3.event.pageY + 3 ) + "px")
+        .style("left", (d3.event.pageX + 3 ) + "px").classed("hidden",false);
+    tooltip.classed("hidden",false);
+}
+
+function mouseout(){
+    d3.select(".tooltip").classed("hidden",true);
 }
 
 d3.select(self.frameElement).style("height", height + "px");
