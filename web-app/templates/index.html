@@ -159,7 +159,7 @@ svg.append("use")
 
 queue()
     .defer(d3.json, "world-50m.json")
-    .defer(d3.csv, "euro2016players_lat_lng.csv")
+    .defer(d3.tsv, "euro2016players_all.tsv")
     .defer(d3.json,"uk.json")
     .defer(d3.tsv, "world-country-names.tsv")
     .await(draw);
@@ -202,6 +202,7 @@ function draw_circles(menu_val){
 }
 
 function draw(error, world, players_from_file,uk,country_names){
+    debugger;
     players = players_from_file;
     var id_name_map = d3.map(country_names, function(d){return d.id});
 
@@ -279,7 +280,7 @@ function draw(error, world, players_from_file,uk,country_names){
 
 function nest_by_club(nodes){
     nodes = d3.nest()
-            .key(function(d){return d.club})
+            .key(function(d){return d.club_name})
             .entries(nodes);
     var packed = pack.nodes({name: "root",
                     children: nodes.map(function(d){
@@ -304,7 +305,7 @@ function mouseover(d){
     var tooltip = d3.select(".tooltip");
     tooltip.select("#name").text(d.name);
     tooltip.select("#club").text(function(){
-        return d.club ? d.club + " (" + d.club_city + ", " + d.club_country + ")" : ""
+        return d.club_name ? d.club_name + " (" + d.club_country_code + ")" : ""
     });
     tooltip.style("top", (d3.event.pageY - 40 ) + "px")
         .style("left", (d3.event.pageX + 3 ) + "px").classed("hidden",false);
