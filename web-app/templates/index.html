@@ -74,7 +74,7 @@ body {
   <p id="club"></p>
 </div>
 
-<script src="d3.v3.js"></script>
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="https://d3js.org/d3-force.v1.min.js"></script>
 <script src="https://d3js.org/d3-timer.v1.min.js"></script>
 <script src="https://d3js.org/d3-collection.v1.min.js"></script>
@@ -88,8 +88,9 @@ body {
 
 var margin = 20,
     width = 900-2*margin,
-    height = 680-2*margin,
-    scale0 = (width - 1) / 2 / Math.PI;
+    height = 680-2*margin;
+var centerX = width/2 + margin/2,
+    centerY = height/2 + margin/2;
 
 var color = d3.scale.category10();
 var players;
@@ -100,6 +101,12 @@ var projection = d3.geo.azimuthalEquidistant()
     .translate([width / 2, height / 2])
     .clipExtent([[margin,margin],[width,height]])
     .precision(.1);
+
+var pack = d3.layout.pack()
+      .value(function(d) { return d.r; })
+      //.size([w, h])
+      .radius(function(d){return d})
+    .padding(1);
 
 var path = d3.geo.path()
     .projection(projection);
@@ -147,37 +154,45 @@ svg.append("use")
 queue()
     .defer(d3.json, "world-50m.json")
     .defer(d3.csv, "euro2016players_lat_lng.csv")
+    .defer(d3.json,"uk.json")
     .await(draw);
 
 function draw_circles(){
     var menu_val = menu.property("value");
-    debugger;
     var players_to_draw = players.filter(function(d){return d.key == menu_val});
 
-  // var aaron = players.filter(function(d){return d.name == "Aaron Hughes"})[0];
-   // console.log(projection(aaron.crds));
+    var nodes = svg.selectAll("circle")
+                .data(players_to_draw[0].values,function(d){return d.name+d.team});
 
-    var circles = svg.selectAll("circle").data(players_to_draw[0].values,function(d){return d.name});
-    circles.exit().remove();
-    circles.enter()
-        .append("circle")
+    var nodesEnter = nodes.enter()
+        .append("circle").attr("class","club")
         .attr("cx", function (d) { return d.x; })
         .attr("cy", function (d) { return d.y; })
-        .attr("r", "3px")
+        .attr("r", 0)
         .attr("opacity",0.7)
-        .attr("fill", "#3366cc")
-        .on("mouseover",function(d){debugger;
-            var tooltip = d3.select(".tooltip");
-            tooltip.select("#name").text(d.name);
-            tooltip.select("#club").text(d.club + " (" + d.club_city + ", " + d.club_country + ")");
-            tooltip.style("top", (d3.event.pageY + 3 ) + "px")
-                .style("left", (d3.event.pageX + 3 ) + "px").classed("hidden",false);
-            tooltip.classed("hidden",false);
-        })
-        .on("mouseout",function(){
-            d3.select(".tooltip").classed("hidden",true);
-        })
-        .on("click",function(d){console.log(d)});
+        .attr("stroke","#0b2a3f")
+        .attr("fill", "#d9ecf9")
+        .on("mouseover",mouseover)
+        .on("mouseout",mouseout)
+        .on("click",function(d){console.log(d)})
+        .each(function(d){
+             svg.append("g").attr("transform","translate(" +d.x+ "," +d.y+ ")")
+                .selectAll(".player").data(d.children,function(d){return d.name;}).enter()
+                .append("circle")
+                .attr("r",0)
+                .attr("class","player")
+                .attr("fill","#1f77b4")
+                .attr("cx", function (n) { return n.x; })
+                .attr("cy", function (n) { return n.y; })
+                .on("mouseover",mouseover)
+                .on("mouseout",mouseout)
+        });
+
+    nodesEnter.transition().delay(400).duration(400).attr("r", function(d){return d.r;});
+    svg.selectAll(".player").transition().delay(400).duration(500).attr("r", 3);
+
+    nodes.exit().transition().duration(400).attr("r",0).remove();
+
 }
 /*
 function zoomed(){
@@ -191,53 +206,48 @@ function zoomed(){
         .attr("cy", function (d) { return projection(d.crds)[1]; })
 }
 */
-function draw(error, world, players_from_file){
+function draw(error, world, players_from_file,uk){
     players = players_from_file;
 
     var countries = topojson.feature(world, world.objects.countries).features,
-        neighbors = topojson.neighbors(world.objects.countries.geometries);
+        uk_regions = topojson.feature(uk, uk.objects.subunits).features;
+
+    countries = countries.filter(function(d){return d.id!=304 && d.id!=826 && d.id!=372});
+    countries = countries.concat(uk_regions);
 
     players.forEach(function(d){
         d.lat = +d.lat;
         d.lng = +d.lng;
         d.crds = [d.lng,d.lat];
-        d.px_crds = projection(d.crds);
-        d.x = d.px_crds[0] + Math.random();
-        d.y = d.px_crds[1] + Math.random();
+        d.px_crds = custom_project(d.crds);
+        d.x_px = d.px_crds[0] + Math.random();
+        d.y_px = d.px_crds[1] + Math.random();
+        d.r = 3;
     });
-    debugger;
+
+    var robbie = players.filter(function(d){return d.name=="Robbie Keane"});
+    console.log(robbie);
 
     players = d3.nest()
             .key(function(d){return d.team})
             .entries(players);
-  /*  players = players.map(function(d){
+
+    players = players.map(function(d){
         return {
             key: d.key,
-
+            values: nest_by_club(d.values)
+            //x: d3.mean()
         }
-    })*/
+    });
 
     var simulation = d3.forceSimulation()
-       // .force("x", d3.forceX(function(d) { return d.x; }).strength(0.02))
-       // .force("y", d3.forceY(function(d){return d.y;}).strength(0.02))
-        .force("collide", d3.forceCollide(3.5).strength(0.05))
+        .force("collide", d3.forceCollide(function(d){return d.r + 1}).strength(0.05))
         .stop();
 
     players.forEach(function(d){
         simulation.nodes(d.values);
         for (var i = 0; i < 200; ++i) simulation.tick();
     });
-
- /*   var simulation = d3.forceSimulation(players)
-        .force("x", d3.forceX(function(d) { return d.x; }).strength(1))
-        .force("y", d3.forceY(function(d){return d.y;}).strength(1))
-        .force("collide", d3.forceCollide(4))
-        .stop();
-//debugger;
-    for (var i = 0; i < 120; ++i) simulation.tick();*/
-
-//filter countries by id (Estonia 233)
-//  countries = countries.filter(function(d){return d.id==233});
 
     svg.selectAll(".country")
         .data(countries)
@@ -254,8 +264,67 @@ function draw(error, world, players_from_file){
 
     draw_circles();
 
+}
 
+function nest_by_club(nodes){
+    nodes = d3.nest()
+            .key(function(d){return d.club})
+            .entries(nodes);
+    var packed = pack.nodes({name: "root",
+                    children: nodes.map(function(d){
+                        return {name: d.key,
+                                team: d.values[0].team,
+                                children: d.values}
+                    })
+    });
+    packed = packed.filter(function(d){return d.depth == 1});
+    packed.forEach(function(d){
+        d.children.forEach(function(player){
+            player.x = player.x - d.x;
+            player.y = player.y - d.y;
+        });
+        d.x = d.children[0].x_px;
+        d.y = d.children[0].y_px;
+    });
+    return packed;
+}
 
+function mouseover(d){
+    var tooltip = d3.select(".tooltip");
+    tooltip.select("#name").text(d.name);
+    tooltip.select("#club").text(function(){
+        return d.club ? d.club + " (" + d.club_city + ", " + d.club_country + ")" : ""
+    });
+    tooltip.style("top", (d3.event.pageY - 40 ) + "px")
+        .style("left", (d3.event.pageX + 3 ) + "px").classed("hidden",false);
+    tooltip.classed("hidden",false);
+}
+
+function mouseout(){
+    d3.select(".tooltip").classed("hidden",true);
+}
+
+function crosses_rect(x,y){
+    var dx = (x-centerX)/Math.abs(x-centerX),
+        dy = (y-centerY)/Math.abs(x-centerX);
+
+    var dh = Math.abs((width-centerX+margin/2)/dx),
+        dw = Math.abs((height-centerY+margin/2)/dy);
+
+    var k = d3.min([dh,dw]);
+
+    return [centerX + k*dx,centerY + k*dy];
+}
+
+function custom_project(crds){
+    var px_crds = projection(crds);
+    var px_x = px_crds[0],
+        px_y = px_crds[1];
+    if (px_x >= margin && px_x <= width-margin && px_y >= margin && px_y <= height-margin){
+        return px_crds;
+    }else{
+        return crosses_rect(px_crds[0],px_crds[1])
+    }
 }
 
 d3.select(self.frameElement).style("height", height + "px");
