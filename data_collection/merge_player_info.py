@@ -6,7 +6,9 @@ class Player:
     keys = ['name', 'team', 'birthday', 'age', 'club_name', 'club_country_code',
             'caps', 'height', 'weight', 'position', 'matches', 'minutes',
             'goals', 'assists', 'pa', 'pc', 'pc_perc', 'on_target', 'off_target',
-            'blocked', 'against_woodwork', 'fouls', 'suffered', 'yellow', 'red']
+            'blocked', 'against_woodwork', 'fouls', 'suffered', 'yellow', 'red',
+            'longer_club_name', 'lat', 'lng', 'uefa_club_name', 'uefa_11_12',
+            'uefa_12_13', 'uefa_13_14', 'uefa_14_15', 'uefa_15_16', 'uefa_pts']
 
     def __init__(self, player_row):
         values = player_row.strip().split(',')
@@ -20,6 +22,24 @@ class Player:
         self.height = values[7]
         self.weight = values[8]
         self.position = values[9]
+
+    def _add_club_coords(self, club_coords):
+        player_club = club_coords[self.club_name]
+        self.longer_club_name = player_club['longer_name']
+        self.lat = player_club['lat']
+        self.lng = player_club['lng']
+
+    def _add_uefa_rankings(self, uefa_clubs, club_longer_names):
+        longer_uefa_name = club_longer_names[self.club_name]
+        if longer_uefa_name in uefa_clubs:
+            uefa_data = uefa_clubs[longer_uefa_name]
+            self.uefa_club_name = uefa_data['club_name']
+            self.uefa_11_12 = uefa_data['11_12']
+            self.uefa_12_13 = uefa_data['12_13']
+            self.uefa_13_14 = uefa_data['13_14']
+            self.uefa_14_15 = uefa_data['14_15']
+            self.uefa_15_16 = uefa_data['15_16']
+            self.uefa_pts = uefa_data['pts']
 
     def _add_goals_stats(self, stats):
         self.matches = stats['matches']
@@ -100,8 +120,58 @@ def add_disciplinary_stats(players):
         players[name]._add_disciplinary_stats(stats[name])
 
 
+def add_club_coords(players, club_coords):
+    for player in players:
+        players[player]._add_club_coords(club_coords)
+
+def add_uefa_rankings(players, uefa_clubs, club_longer_names):
+    for player in players:
+        players[player]._add_uefa_rankings(uefa_clubs, club_longer_names)
+
+
+def read_club_longer_names():
+    short_to_long_name_map = {}
+    with open('data/club_long_names.csv', encoding='utf8') as in_file:
+        for line in in_file:
+            values = line.rstrip().split('\t')
+            short_to_long_name_map[values[0]] = values[1].split(';')[0]
+    return short_to_long_name_map
+
+
+def read_club_info():
+    short_key_clubs = {}
+    long_key_clubs = {}
+    with open('data/club_coords_info.csv', encoding='utf8') as in_file:
+        tags = in_file.readline().rstrip().split('\t')
+        for line in in_file:
+            values = line.rstrip().split('\t')
+            name = values[1]
+            long_name = values[0]
+            d = {x: y for x, y in zip(tags, values)}
+            short_key_clubs[name] = d
+            long_key_clubs[name] = d
+    return short_key_clubs, long_key_clubs
+
+
+def read_uefa_clubs():
+    clubs = {}
+    with open('data/uefa_clubs.csv', encoding='utf8') as in_file:
+        tags = in_file.readline().strip().split('\t')
+        for line in in_file:
+            values = line.strip().split('\t')
+            club_name = values[0]
+            d = {x: y for x, y in zip(tags, values)}
+            clubs[club_name] = d
+    return clubs
+
+
 def main():
     players = read_players()
+    short_key_clubs, long_key_clubs = read_club_info()
+    uefa_club_stats = read_uefa_clubs()
+    short_to_long_name_map = read_club_longer_names()
+    add_club_coords(players, short_key_clubs)
+    add_uefa_rankings(players, uefa_club_stats, short_to_long_name_map)
     add_goal_stats(players)
     add_passes_stats(players)
     add_attempts_stats(players)
