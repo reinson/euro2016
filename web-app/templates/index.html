@@ -8,8 +8,17 @@ body {
   background: #fcfcfa;
 }
 
-.country.active{
-    fill: red;
+.country.qualified{
+    fill: #e5f5e0;
+}
+
+.country.qualified.active,
+.country.qualified.active:hover {
+    fill: #fec44f;
+}
+
+.country.qualified:hover{
+    fill: #c7e9c0;
 }
 
 .country {
@@ -17,9 +26,7 @@ body {
     stroke: #bdbdbd;
     stroke-linejoin: round;
     stroke-linecap: round;
-    pointer-events: none;
-
-    stroke-width: 1.5;
+    stroke-width: 1;
 }
 
 .stroke {
@@ -115,10 +122,6 @@ var path = d3.geo.path()
     .projection(projection);
 
 
-var menu = d3.select("body").append("div")
-        .attr("id","menu").append("select")
-        .on("change",draw_circles);
-
 /*var zoom = d3.behavior.zoom()
     .translate([width / 2, height / 2])
     .scale(900)
@@ -161,8 +164,7 @@ queue()
     .defer(d3.tsv, "world-country-names.tsv")
     .await(draw);
 
-function draw_circles(){
-    var menu_val = menu.property("value");
+function draw_circles(menu_val){
     var players_to_draw = players.filter(function(d){return d.key == menu_val});
 
     var nodes = svg.selectAll("circle")
@@ -201,9 +203,10 @@ function draw_circles(){
 
 function draw(error, world, players_from_file,uk,country_names){
     players = players_from_file;
+    var id_name_map = d3.map(country_names, function(d){return d.id});
 
+    //ids of euope countries
     var show_ids = country_names.filter(function(d){return d.europe;}).map(function(d){return +d.id});
-    debugger;
 
     var countries = topojson.feature(world, world.objects.countries).features,
         uk_regions = topojson.feature(uk, uk.objects.subunits).features;
@@ -245,23 +248,32 @@ function draw(error, world, players_from_file,uk,country_names){
         for (var i = 0; i < 200; ++i) simulation.tick();
     });
 
+    var euro2016_countries = players.map(function(d){return d.key});
+
     svg.selectAll(".country")
         .data(countries)
         .enter().insert("path", ".graticule")
         .attr("class", "country")
         .attr("d", path)
         .classed("qualified", function(d){
-
+            return euro2016_countries.indexOf(id_name_map.get(d.id).name) != -1;
+        })
+        .classed("active",function(d){
+            return d.id == 250;
+        })
+        .on("click",function(d){
+            var clicked = d3.select(this);
+            debugger;
+            if (!clicked.classed("active")){
+                draw_circles(id_name_map.get(d.id).name);
+                d3.select(".active").classed("active",false);
+                clicked.classed("active",true);
+            }
         });
+           // .on("mouseover",f);
 
-    var euro2016_countries = players.map(function(d){return d.key});
+    draw_circles("France");
 
-    menu.selectAll("option")
-        .data(euro2016_countries).enter()
-        .append("option")
-        .text(function(d){return d});
-
-    draw_circles();
 
 }
 

@@ -108,7 +108,7 @@ id	name	europe
 360	Indonesia	
 364	Iran, Islamic Republic of	show
 368	Iraq	show
-372	Ireland	show
+372	Ireland	
 376	Israel	show
 380	Italy	show
 384	Côte d'Ivoire	
@@ -186,7 +186,7 @@ id	name	europe
 634	Qatar	
 638	Réunion	
 642	Romania	show
-643	Russian Federation	show
+643	Russia	show
 646	Rwanda	
 652	Saint Barthélemy	
 654	Saint Helena, Ascension and Tristan da Cunha	
@@ -251,3 +251,8 @@ id	name	europe
 882	Samoa	
 887	Yemen	
 894	Zambia	
+ENG	England	
+IRL	Republic of Ireland	
+NIR	Northern Ireland	
+WLS	Wales	
+SCT	Scotland	
