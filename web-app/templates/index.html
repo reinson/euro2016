@@ -113,10 +113,13 @@ var projection = d3.geo.azimuthalEquidistant()
     .precision(.1);
 
 var pack = d3.layout.pack()
-      .value(function(d) { return d.r; })
-      //.size([w, h])
-      .radius(function(d){return d})
+    .value(function(d) { return d.r; })
+    .radius(function(d){return d})
     .padding(1);
+
+var simulation = d3.forceSimulation()
+    .force("collide", d3.forceCollide(function(d){return d.r + 1}).strength(0.05))
+    .stop();
 
 var path = d3.geo.path()
     .projection(projection);
@@ -197,7 +200,7 @@ function draw_circles(menu_val){
         });
 
     nodesEnter.transition().delay(400).duration(400).attr("r", function(d){return d.r;});
-    svg.selectAll(".player").transition().delay(400).duration(500).attr("r", 3);
+    svg.selectAll(".player").transition().delay(400).duration(500).attr("r", function(d){return d.r});
 
     nodes.exit().transition().duration(400).attr("r",0).remove();
 
@@ -228,7 +231,7 @@ function draw(error, world, players_from_file,uk,country_names){
         d.px_crds = custom_project(d.crds);
         d.x_px = d.px_crds[0] + Math.random();
         d.y_px = d.px_crds[1] + Math.random();
-        d.r = 3;
+        d.r = Math.random()*2+3;
     });
 
     var robbie = players.filter(function(d){return d.name=="Robbie Keane"});
@@ -246,9 +249,6 @@ function draw(error, world, players_from_file,uk,country_names){
         }
     });
 
-    var simulation = d3.forceSimulation()
-        .force("collide", d3.forceCollide(function(d){return d.r + 1}).strength(0.05))
-        .stop();
 
     players.forEach(function(d){
         simulation.nodes(d.values);
@@ -266,7 +266,7 @@ function draw(error, world, players_from_file,uk,country_names){
             return euro2016_countries.indexOf(d.name) != -1;
         })
         .classed("active",function(d){
-            return d.id == 250;
+            return d.id == 250; //france is active at first
         })
         .on("click",function(d){
             var clicked = d3.select(this);
