@@ -22,6 +22,13 @@ class Player:
         self.height = values[7]
         self.weight = values[8]
         self.position = values[9]
+        self.goals = '0'
+        self.minutes = '0'
+        self.pc_perc = '0'
+        self.fouls = '0'
+        self.suffered = '0'
+        self.yellow = '0'
+        self.red = '0'
 
     def _add_club_coords(self, club_coords):
         player_club = club_coords[self.club_name]
@@ -93,7 +100,7 @@ def read_players():
 
 
 def write_players(players):
-    with open('data/euro2016players_all.csv', 'w', encoding='utf8') as out_file:
+    with open('data/euro2016players_all.tsv', 'w', encoding='utf8') as out_file:
         out_file.write('\t'.join(Player.keys) + '\n')
         for player in players:
             out_file.write(players[player]._str() + '\n')

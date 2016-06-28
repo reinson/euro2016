@@ -25,7 +25,7 @@ def get_goals_stats():
 
     #print(len(rows))
 
-    html_file = open('data/_loadRemaining_goals.html', encoding='utf8')
+    html_file = open('data/_loadRemaining_goals_2806.html', encoding='utf8')
     soup = BeautifulSoup(html.unescape(html_file.read()), 'lxml')
     rows = soup.findAll('tr')
 
@@ -33,7 +33,7 @@ def get_goals_stats():
     goals_stats = {}
     for row in rows:
         items = row.findAll('td')
-        if len(items) > 6:
+        if len(items) != 6:
             continue
         name = items[0].findAll('span', {'class': 'html-attribute-value'})[6].contents[0]
         matches = items[1].contents[0]
@@ -48,7 +48,7 @@ def get_goals_stats():
 
 
 def get_passes_stats():
-    html_file = open('data/_loadRemaining_distribution.html', encoding='utf8')
+    html_file = open('data/_loadRemaining_distribution_2806.html', encoding='utf8')
     soup = BeautifulSoup(html.unescape(html_file.read()), 'lxml')
     rows = soup.findAll('tr')
 
@@ -56,12 +56,12 @@ def get_passes_stats():
     passes_stats = {}
     for row in rows:
         items = row.findAll('td')
-        if len(items) > 6:
+        if len(items) != 5:
             continue
-        name = items[0].findAll('span', {'class': 'html-attribute-value'})[6].contents[0]
+        name = items[0].findAll('a')[0].contents[0]
         pa = items[1].contents[0]
         pc = items[2].contents[0]
-        pc_perc = items[3].contents[0]
+        pc_perc = items[3].contents[0].strip('%')
         d = {x: y for x, y in zip(keys, [pa, pc, pc_perc])}
         passes_stats[name] = d
 
@@ -70,7 +70,7 @@ def get_passes_stats():
 
 
 def get_attempts_stats():
-    html_file = open('data/_loadRemaining_attempts.html', encoding='utf8')
+    html_file = open('data/_loadRemaining_attempts_2806.html', encoding='utf8')
     soup = BeautifulSoup(html.unescape(html_file.read()), 'lxml')
     rows = soup.findAll('tr')
 
@@ -78,9 +78,9 @@ def get_attempts_stats():
     attempts_stats = {}
     for row in rows:
         items = row.findAll('td')
-        if len(items) > 7:
+        if len(items) != 7:
             continue
-        name = items[0].findAll('span', {'class': 'html-attribute-value'})[6].contents[0]
+        name = items[0].findAll('a')[0].contents[0]
         on_target = items[2].contents[0]
         off_target = items[3].contents[0]
         blocked = items[4].contents[0]
@@ -93,7 +93,7 @@ def get_attempts_stats():
 
 
 def get_disciplinary_stats():
-    html_file = open('data/_loadRemaining_disciplinary.html', encoding='utf8')
+    html_file = open('data/_loadRemaining_disciplinary_2806.html', encoding='utf8')
     soup = BeautifulSoup(html.unescape(html_file.read()), 'lxml')
     rows = soup.findAll('tr')
 
@@ -101,9 +101,9 @@ def get_disciplinary_stats():
     disciplinary_stats = {}
     for row in rows:
         items = row.findAll('td')
-        if len(items) > 7:
+        if len(items) != 7:
             continue
-        name = items[0].findAll('span', {'class': 'html-attribute-value'})[6].contents[0]
+        name = items[0].findAll('a')[0].contents[0]#items[0].findAll('span', {'class': 'html-attribute-value'})[6].contents[0]
         fouls = items[2].contents[0]
         suffered = items[3].contents[0]
         yellow = items[4].contents[0]
