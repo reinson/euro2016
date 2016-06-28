@@ -9,21 +9,21 @@ body {
 }
 
 .country.qualified{
-    fill: #e5f5e0;
+    fill: #CFD5E1;
 }
 
 .country.qualified.active,
 .country.qualified.active:hover {
-    fill: #fec44f;
+    fill: #A6AEC1;
 }
 
 .country.qualified:hover{
-    fill: #c7e9c0;
+    fill: #A6AEC1;
 }
 
 .country {
-    fill: #f0f0f0;
-    stroke: #bdbdbd;
+    fill: #EDEDF2;
+    stroke: #EDEDF2;
     stroke-linejoin: round;
     stroke-linecap: round;
     stroke-width: 1;
@@ -169,6 +169,14 @@ queue()
     .defer(d3.tsv, "world-country-names.tsv")
     .await(draw);
 
+var position_color = d3.scale.ordinal()
+    .domain(['Goalkeeper', 'Defender', 'Midfield', 'Forward'])
+    .range(['#2ca02c', '#1f77b4', '#ff7f0e', '#d62728']);
+
+var player_size = d3.scale.linear()
+        .domain([0, 286])
+        .range([3,6])
+
 function draw_circles(menu_val){
     var players_to_draw = players.filter(function(d){return d.key == menu_val});
 
@@ -183,6 +191,7 @@ function draw_circles(menu_val){
         .attr("opacity",0.7)
         .attr("stroke","#0b2a3f")
         .attr("fill", "#d9ecf9")
+            .attr("stroke-width", 1)
         .on("mouseover",mouseover)
         .on("mouseout",mouseout)
         .on("click",function(d){console.log(d)})
@@ -192,7 +201,11 @@ function draw_circles(menu_val){
                 .append("circle")
                 .attr("r",0)
                 .attr("class","player")
-                .attr("fill","#1f77b4")
+                .attr("fill", function(n) {if (n.matches > 0) {return position_color(n.position)}
+                                            else {return "none"}
+                })
+                     .attr("stroke", function(n) {return position_color(n.position)})
+                     .attr("stroke-width", function (n) {if (n.matches > 0) {return 0} else {return 2}})
                 .attr("cx", function (n) { return n.x; })
                 .attr("cy", function (n) { return n.y; })
                 .on("mouseover",mouseover)
@@ -231,7 +244,15 @@ function draw(error, world, players_from_file,uk,country_names){
         d.px_crds = custom_project(d.crds);
         d.x_px = d.px_crds[0] + Math.random();
         d.y_px = d.px_crds[1] + Math.random();
-        d.r = Math.random()*2+3;
+        d.matches = +d.matches
+        d.r = 4 + d.matches//Math.random()*4+3;
+        //d.col = position_color(d.position);
+        //if (d.matches > 0) {
+        //    d.fill = d.col;
+        //} else {
+        //    d.fill = "none"
+        //}
+
     });
 
     var robbie = players.filter(function(d){return d.name=="Robbie Keane"});
