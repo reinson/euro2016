@@ -121,6 +121,8 @@ var pack = d3.layout.pack()
 var path = d3.geo.path()
     .projection(projection);
 
+var tooltip = d3.select(".tooltip");
+
 
 /*var zoom = d3.behavior.zoom()
     .translate([width / 2, height / 2])
@@ -273,7 +275,10 @@ function draw(error, world, players_from_file,uk,country_names){
                 d3.select(".active").classed("active",false);
                 clicked.classed("active",true);
             }
-        });
+        })
+        .on("mouseover",mouseover)
+        .on("mouseout",mouseout)
+        .on("mousemove",mousemove);
            // .on("mouseover",f);
 
     draw_circles("France");
@@ -305,7 +310,6 @@ function nest_by_club(nodes){
 }
 
 function mouseover(d){
-    var tooltip = d3.select(".tooltip");
     tooltip.select("#name").text(d.name);
     tooltip.select("#club").text(function(){
         return d.club_name ? d.club_name + " (" + d.club_country_code + ")" : ""
@@ -316,7 +320,12 @@ function mouseover(d){
 }
 
 function mouseout(){
-    d3.select(".tooltip").classed("hidden",true);
+    tooltip.classed("hidden",true);
+}
+
+function mousemove(){
+    tooltip.style("top", (d3.event.pageY - 40 ) + "px")
+        .style("left", (d3.event.pageX + 3 ) + "px");
 }
 
 function crosses_rect(x,y){
