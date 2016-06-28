@@ -202,7 +202,7 @@ function draw_circles(menu_val){
 }
 
 function draw(error, world, players_from_file,uk,country_names){
-    debugger;
+
     players = players_from_file;
     var id_name_map = d3.map(country_names, function(d){return d.id});
 
@@ -214,6 +214,10 @@ function draw(error, world, players_from_file,uk,country_names){
 
     countries = countries.filter(function(d){return show_ids.indexOf(d.id)!=-1});
     countries = countries.concat(uk_regions);
+
+    countries.forEach(function(d){
+        d.name = id_name_map.get(d.id).name;
+    });
 
     players.forEach(function(d){
         d.lat = +d.lat;
@@ -257,16 +261,15 @@ function draw(error, world, players_from_file,uk,country_names){
         .attr("class", "country")
         .attr("d", path)
         .classed("qualified", function(d){
-            return euro2016_countries.indexOf(id_name_map.get(d.id).name) != -1;
+            return euro2016_countries.indexOf(d.name) != -1;
         })
         .classed("active",function(d){
             return d.id == 250;
         })
         .on("click",function(d){
             var clicked = d3.select(this);
-            debugger;
             if (!clicked.classed("active")){
-                draw_circles(id_name_map.get(d.id).name);
+                draw_circles(d.name);
                 d3.select(".active").classed("active",false);
                 clicked.classed("active",true);
             }
