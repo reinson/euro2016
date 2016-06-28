@@ -201,11 +201,9 @@ function draw_circles(menu_val){
                 .append("circle")
                 .attr("r",0)
                 .attr("class","player")
-                .attr("fill", function(n) {if (n.matches > 0) {return position_color(n.position)}
-                                            else {return "none"}
-                })
-                     .attr("stroke", function(n) {return position_color(n.position)})
-                     .attr("stroke-width", function (n) {if (n.matches > 0) {return 0} else {return 2}})
+                .attr("fill", function(n) {if (n.matches > 0) {return position_color(n.position)} else {return "white"}})
+                .attr("stroke", function(n) {return position_color(n.position)})
+                .attr("stroke-width", function (n) {if (n.matches > 0) {return 0} else {return 2}})
                 .attr("cx", function (n) { return n.x; })
                 .attr("cy", function (n) { return n.y; })
                 .on("mouseover",mouseover)
