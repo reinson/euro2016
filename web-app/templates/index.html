@@ -23,7 +23,7 @@ body {
 
 .country {
     fill: #EDEDF2;
-    stroke: #EDEDF2;
+    stroke: #fff;
     stroke-linejoin: round;
     stroke-linecap: round;
     stroke-width: 1;
@@ -82,6 +82,15 @@ body {
 <div class="tooltip hidden">
   <strong> <p id="name"></p> </strong>
   <p id="club"></p>
+  <p id="age"></p>
+  <p id="matches"></p>
+  <p id="goals"></p>
+  <p id="pc_perc"></p>
+  <p id="fouls"></p>
+  <p id="suffered"></p>
+  <p id="yellow"></p>
+  <p id="red"></p>
+
 </div>
 
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
@@ -243,13 +252,13 @@ function draw(error, world, players_from_file,uk,country_names){
         d.x_px = d.px_crds[0] + Math.random();
         d.y_px = d.px_crds[1] + Math.random();
         d.matches = +d.matches
-        d.r = 4 + d.matches//Math.random()*4+3;
-        //d.col = position_color(d.position);
-        //if (d.matches > 0) {
-        //    d.fill = d.col;
-        //} else {
-        //    d.fill = "none"
-        //}
+        d.goals = +d.goals
+        d.pc_perc = +d.pc_perc
+        d.fouls = +d.fouls
+        d.suffered = +d.suffered
+        d.yellow = +d.yellow
+        d.red = +d.red
+        d.r = 4 + d.matches
 
     });
 
@@ -331,7 +340,31 @@ function nest_by_club(nodes){
 function mouseover(d){
     tooltip.select("#name").text(d.name);
     tooltip.select("#club").text(function(){
-        return d.club_name ? d.club_name + " (" + d.club_country_code + ")" : ""
+        return d.club_name ? 'Club: ' + d.club_name + " (" + d.club_country_code + ")" : ""
+    });
+    tooltip.select("#matches").text(function(){
+        return d.matches ? 'Matches: ' + d.matches : ""
+    });
+    tooltip.select("#goals").text(function(){
+        return d.goals ? 'Goals: ' + d.goals : ""
+    });
+    tooltip.select("#pc_perc").text(function(){
+        return d.pc_perc ? 'PC%: ' + d.pc_perc + '%' : ""
+    });
+    tooltip.select("#age").text(function(){
+        return d.age ? 'Age: ' + d.age : ""
+    });
+    tooltip.select("#fouls").text(function(){
+        return d.fouls ? 'Fouls: ' + d.fouls : ""
+    });
+    tooltip.select("#suffered").text(function(){
+        return d.suffered ? 'Suffered: ' + d.suffered : ""
+    });
+    tooltip.select("#yellow").text(function(){
+        return d.yellow ? 'Yellow: ' + d.yellow : ""
+    });
+    tooltip.select("#red").text(function(){
+        return d.red ? 'Red: ' + d.red : ""
     });
     tooltip.style("top", (d3.event.pageY - 40 ) + "px")
         .style("left", (d3.event.pageX + 3 ) + "px").classed("hidden",false);
