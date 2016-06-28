@@ -64,6 +64,9 @@ class Player:
         self.yellow = stats['yellow']
         self.red = stats['red']
 
+    def _add_matches(self, matches):
+        self.matches = matches.replace('-', '0')
+
     def _str(self):
         variables = []
         for key in self.keys:
@@ -85,7 +88,7 @@ def read_players():
             if line.strip() == '':
                 continue
             player = Player(line)
-            players[player.name] = player
+            players[player.name.strip()] = player
     return players
 
 
@@ -94,6 +97,13 @@ def write_players(players):
         out_file.write('\t'.join(Player.keys) + '\n')
         for player in players:
             out_file.write(players[player]._str() + '\n')
+
+
+def add_new_matches_stats(players, goal_info):
+    for player in players:
+        if 'Neuer' in player:
+            print(goal_info[player.strip()]['euro16_games'])
+        players[player.strip()]._add_matches(goal_info[player.strip()]['euro16_games'])
 
 
 def add_goal_stats(players):
@@ -105,19 +115,19 @@ def add_goal_stats(players):
 def add_passes_stats(players):
     stats = get_passes_stats()
     for name in stats:
-        players[name]._add_passes_stats(stats[name])
+        players[name.strip()]._add_passes_stats(stats[name])
 
 
 def add_attempts_stats(players):
     stats = get_attempts_stats()
     for name in stats:
-        players[name]._add_attempts_stats(stats[name])
+        players[name.strip()]._add_attempts_stats(stats[name])
 
 
 def add_disciplinary_stats(players):
     stats = get_disciplinary_stats()
     for name in stats:
-        players[name]._add_disciplinary_stats(stats[name])
+        players[name.strip()]._add_disciplinary_stats(stats[name])
 
 
 def add_club_coords(players, club_coords):
@@ -145,7 +155,7 @@ def read_club_info():
         tags = in_file.readline().rstrip().split('\t')
         for line in in_file:
             values = line.rstrip().split('\t')
-            name = values[1]
+            name = values[1].strip()
             long_name = values[0]
             d = {x: y for x, y in zip(tags, values)}
             short_key_clubs[name] = d
@@ -165,17 +175,34 @@ def read_uefa_clubs():
     return clubs
 
 
+def read_player_nrofgames_info_2():
+    d = {}
+    with open('data/euro2016players_2.csv', encoding='utf8') as in_file:
+        tags = in_file.readline().rstrip().split(',')
+        for line in in_file:
+            if line.strip() == '':
+                continue
+            values = line.rstrip().split(',')
+            name = values[1].split(' (')[0].strip().replace('  ', ' ')
+            if 'Zinchenko' in name:
+                print(name)
+            d[name] = {x: y for x, y in zip(tags, values)}
+    return d
+
+
 def main():
     players = read_players()
     short_key_clubs, long_key_clubs = read_club_info()
     uefa_club_stats = read_uefa_clubs()
     short_to_long_name_map = read_club_longer_names()
+    goal_info = read_player_nrofgames_info_2()
     add_club_coords(players, short_key_clubs)
     add_uefa_rankings(players, uefa_club_stats, short_to_long_name_map)
     add_goal_stats(players)
     add_passes_stats(players)
     add_attempts_stats(players)
     add_disciplinary_stats(players)
+    add_new_matches_stats(players, goal_info)
     write_players(players)
 
 
