@@ -46,13 +46,36 @@ body {
 
 .legend_text{
     text-anchor: end;
-    font-family: Verdana Geneva, sans-serif;
-    font-size: 14px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 13px;
+    fill: #636363;
+}
+
+.legend_title{
+    text-anchor: end;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    fill: #636363;
+}
+
+.size_legend_title{
+    text-anchor: start;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    fill: #636363;
+}
+
+.size_legend_text{
+    text-anchor: start;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 13px;
     fill: #636363;
 }
 
 .title_text{
-    font-family: Verdana Geneva, sans-serif;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     text-anchor: middle;
     font-size: 30px;
     fill: #636363;
@@ -335,8 +358,17 @@ function draw(error, world, players_from_file,uk,country_names){
         .append("g")
         .attr("class", "leged")
         .attr("transform", function(d,i){
-            return "translate(160," + (50+i*14) + ")"
+            return "translate(210," + (50+(i+1)*14) + ")"
         });
+
+    var size_legend = svg.selectAll(".legend")
+            .data([0,1,2,3,4])
+            .enter()
+            .append("g")
+            .attr("class", "legend")
+            .attr("transform", function(d,i){
+               return "translate(250," + (50+(i+1)*14) + ")"
+            });
 
     legend.append("text").attr("class", "legend_text").text(function(d){return d});
     legend.append("circle").attr("r",5).attr("fill",function(d){return position_color(d)})
@@ -344,9 +376,27 @@ function draw(error, world, players_from_file,uk,country_names){
             .attr("cx",10)
             .attr("cy",-4);
 
+    size_legend.append("circle").attr("r", function(d) {return d3.max([2, 3 + 0.7 * d])}).attr("fill", function(d){if (d == 0) {return "#F4F4F4"} else {return "#838383"}})
+            .attr("stroke", function(d) {if (d == 0) {return "#838383"} else {return null}})
+            .attr("stroke-width", function(d) {if (d == 0) {return 1.5} else {return null}})
+            .attr("class", "legend_circle")
+            .attr("cx",-10)
+            .attr("cy",-4)
+    size_legend.append("text").attr("class", "size_legend_text").text(function(d){return d});
+
+
     svg.append("text").text("UEFA Euro2016 Players' Home Clubs")
             .attr("class","title_text")
             .attr("transform","translate(" + (width+margin)/2 + ",8)");
+
+    svg.append("text").text("POSITION")
+        .attr("class","legend_title")
+        .attr("transform","translate(225," + (45) + ")");
+
+    svg.append("text").text("MATCHES")
+        .attr("class","size_legend_title")
+        .attr("transform","translate(235," + (45) + ")");
+
 
     draw_circles("France");
 
