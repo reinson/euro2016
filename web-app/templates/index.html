@@ -31,8 +31,8 @@ body {
 
 .stroke {
   fill: none;
-  stroke: #000;
-  stroke-width: 2px;
+  stroke: #636363;
+  stroke-width: 3px;
 }
 
 .fill {
@@ -46,10 +46,16 @@ body {
 
 .legend_text{
     text-anchor: end;
-    font: sans-serif;
+    font-family: Verdana Geneva, sans-serif;
     font-size: 14px;
     fill: #636363;
-    font-style: italic;
+}
+
+.title_text{
+    font-family: Verdana Geneva, sans-serif;
+    text-anchor: middle;
+    font-size: 30px;
+    fill: #636363;
 }
 
 
@@ -113,12 +119,10 @@ body {
 <script src="//d3js.org/queue.v1.min.js"></script>
 <script>
 
-var screenwidth=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-var screenheigth=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
 var margin = 20,
-    width = screenwidth-2*margin -40,
-    height = screenheigth-2*margin -60;
+    width = 860-2*margin,
+    height = 640-2*margin;
 var centerX = width/2 + margin/2,
     centerY = height/2 + margin/2;
 
@@ -338,7 +342,11 @@ function draw(error, world, players_from_file,uk,country_names){
     legend.append("circle").attr("r",5).attr("fill",function(d){return position_color(d)})
             .attr("class","legend_circle")
             .attr("cx",10)
-            .attr("cy",-3);
+            .attr("cy",-4);
+
+    svg.append("text").text("UEFA Euro2016 Players' Home Clubs")
+            .attr("class","title_text")
+            .attr("transform","translate(" + (width+margin)/2 + ",8)");
 
     draw_circles("France");
 
