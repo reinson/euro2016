@@ -113,9 +113,12 @@ body {
 <script src="//d3js.org/queue.v1.min.js"></script>
 <script>
 
+var screenwidth=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var screenheigth=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
 var margin = 20,
-    width = 860-2*margin,
-    height = 640-2*margin;
+    width = screenwidth-2*margin -40,
+    height = screenheigth-2*margin -60;
 var centerX = width/2 + margin/2,
     centerY = height/2 + margin/2;
 
