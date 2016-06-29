@@ -13,12 +13,12 @@ body {
 }
 
 .country.qualified.active,
-.country.qualified.active:hover {
-    fill: #A6AEC1;
+.country.qualified.active:hover{
+    fill: #fed976;
 }
 
 .country.qualified:hover{
-    fill: #A6AEC1;
+    fill: #ffeda0;
 }
 
 .country {
@@ -42,6 +42,14 @@ body {
 
 .land {
   fill: #222;
+}
+
+.legend_text{
+    text-anchor: end;
+    font: sans-serif;
+    font-size: 14px;
+    fill: #636363;
+    font-style: italic;
 }
 
 
@@ -192,11 +200,11 @@ var player_size = d3.scale.linear()
 function draw_circles(menu_val){
     var players_to_draw = players.filter(function(d){return d.key == menu_val});
 
-    var nodes = svg.selectAll("circle")
+    var nodes = svg.selectAll("circle:not(.legend_circle)")
                 .data(players_to_draw[0].values,function(d){return d.name+d.team});
 
     var nodesEnter = nodes.enter()
-        .append("circle").attr("class","club")
+        .append("circle").attr("class","data_circle")
         .attr("cx", function (d) { return d.x; })
         .attr("cy", function (d) { return d.y; })
         .attr("r", 0)
@@ -256,14 +264,14 @@ function draw(error, world, players_from_file,uk,country_names){
         d.px_crds = custom_project(d.crds);
         d.x_px = d.px_crds[0] + Math.random();
         d.y_px = d.px_crds[1] + Math.random();
-        d.matches = +d.matches
-        d.goals = +d.goals
-        d.pc_perc = +d.pc_perc
-        d.fouls = +d.fouls
-        d.suffered = +d.suffered
-        d.yellow = +d.yellow
-        d.red = +d.red
-        d.r =  3 + 0.7*d.matches
+        d.matches = +d.matches;
+        d.goals = +d.goals;
+        d.pc_perc = +d.pc_perc;
+        d.fouls = +d.fouls;
+        d.suffered = +d.suffered;
+        d.yellow = +d.yellow;
+        d.red = +d.red;
+        d.r =  3 + 0.7*d.matches;
 
     });
 
@@ -313,6 +321,21 @@ function draw(error, world, players_from_file,uk,country_names){
         .on("mouseout",mouseout)
         .on("mousemove",mousemove);
            // .on("mouseover",f);
+
+    var legend = svg.selectAll(".legend")
+        .data(position_color.domain())
+        .enter()
+        .append("g")
+        .attr("class", "leged")
+        .attr("transform", function(d,i){
+            return "translate(160," + (50+i*14) + ")"
+        });
+
+    legend.append("text").attr("class", "legend_text").text(function(d){return d});
+    legend.append("circle").attr("r",5).attr("fill",function(d){return position_color(d)})
+            .attr("class","legend_circle")
+            .attr("cx",10)
+            .attr("cy",-3);
 
     draw_circles("France");
 
