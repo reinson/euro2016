@@ -1,120 +1,33 @@
 <!-- https://bl.ocks.org/mbostock/4180634 -->
 
 <!DOCTYPE html>
-<meta charset="utf-8">
-<style>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="Tormi Reinson & Mari-Liis Allikivi ">
+    <link rel="icon" href="../../favicon.ico">
 
-body {
-  background: #fcfcfa;
-}
+    <title>Home Clubs of UEFA euro2016 players</title>
 
-.country.qualified{
-    fill: #CFD5E1;
-}
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="Cache-Control" content="no-store" />
 
-.country.qualified.active,
-.country.qualified.active:hover{
-    fill: #fed976;
-}
+    <link href="styles.css" rel="stylesheet">
 
-.country.qualified:hover{
-    fill: #ffeda0;
-}
-
-.country {
-    fill: #EDEDF2;
-    stroke: #fff;
-    stroke-linejoin: round;
-    stroke-linecap: round;
-    stroke-width: 1;
-}
-
-.stroke {
-  fill: none;
-  stroke: #636363;
-  stroke-width: 3px;
-}
-
-.fill {
-  fill: #fff;
-}
-
-
-.land {
-  fill: #222;
-}
-
-.legend_text{
-    text-anchor: end;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    font-size: 13px;
-    fill: #636363;
-}
-
-.legend_title{
-    text-anchor: end;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    font-size: 13px;
-    font-weight: bold;
-    fill: #636363;
-}
-
-.size_legend_title{
-    text-anchor: start;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    font-size: 13px;
-    font-weight: bold;
-    fill: #636363;
-}
-
-.size_legend_text{
-    text-anchor: start;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    font-size: 13px;
-    fill: #636363;
-}
-
-.title_text{
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    text-anchor: middle;
-    font-size: 30px;
-    fill: #636363;
-}
-
-
-.tooltip {
-        position: absolute;
-        width: auto;
-        height: auto;
-        padding: 10px;
-        background-color: white;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        border-radius: 10px;
-        -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-        -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-        pointer-events: none;
-}
-
-.tooltip.hidden {
-        display: none;
-}
-
-.tooltip p {
-        margin: 0;
-        font-family: sans-serif;
-        font-size: 16px;
-        line-height: 20px;
-}
-
-.overlay {
-  fill: none;
-  pointer-events: all;
-}
-
-</style>
+</head>
 <body>
+
+<div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.6";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="tooltip hidden">
   <strong> <p id="name"></p> </strong>
@@ -181,7 +94,7 @@ var tooltip = d3.select(".tooltip");
     .on("zoom", zoomed);*/
 
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("body").append("div").  append("svg")
     .attr("width", width+2*margin)
     .attr("height", height+2*margin)
     .append("g")
@@ -495,3 +408,14 @@ function custom_project(crds){
 d3.select(self.frameElement).style("height", height + "px");
 
 </script>
+
+<div class="social">
+    <div class="fb-share-button" data-href="http://euro2016map.appspot.com/" data-layout="button" data-mobile-iframe="true">
+        <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Feuro2016map.appspot.com%2F&amp;src=sdkpreparse">Share</a>
+    </div>
+
+
+    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://http://euro2016map.appspot.com/" data-text="Interactive visualization of UEFA euro2016 players' home clubs." data-via="TormiReinson">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+</div>

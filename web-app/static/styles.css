@@ -1,0 +1,120 @@
+body {
+  background: #fcfcfa;
+}
+
+.country.qualified{
+    fill: #CFD5E1;
+}
+
+.country.qualified.active,
+.country.qualified.active:hover{
+    fill: #fed976;
+}
+
+.country.qualified:hover{
+    fill: #ffeda0;
+}
+
+.country {
+    fill: #EDEDF2;
+    stroke: #fff;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-width: 1;
+}
+
+.stroke {
+  fill: none;
+  stroke: #636363;
+  stroke-width: 3px;
+}
+
+.fill {
+  fill: #fff;
+}
+
+
+.land {
+  fill: #222;
+}
+
+.legend_text{
+    text-anchor: end;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 13px;
+    fill: #636363;
+}
+
+.legend_title{
+    text-anchor: end;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    fill: #636363;
+}
+
+.size_legend_title{
+    text-anchor: start;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    fill: #636363;
+}
+
+.size_legend_text{
+    text-anchor: start;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 13px;
+    fill: #636363;
+}
+
+.title_text{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    text-anchor: middle;
+    font-size: 30px;
+    fill: #636363;
+}
+
+
+.tooltip {
+        position: absolute;
+        width: auto;
+        height: auto;
+        padding: 10px;
+        background-color: white;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        pointer-events: none;
+}
+
+.tooltip.hidden {
+        display: none;
+}
+
+.tooltip p {
+        margin: 0;
+        font-family: sans-serif;
+        font-size: 16px;
+        line-height: 20px;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+
+.fb-share-button{
+ margin-left:40px;
+}
+
+.social iframe {
+vertical-align: middle;
+}
+.social div span {
+vertical-align:middle !important;
+}
