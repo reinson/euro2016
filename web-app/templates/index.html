@@ -32,14 +32,7 @@
 <div class="tooltip hidden">
   <strong> <p id="name"></p> </strong>
   <p id="club"></p>
-  <!--<p id="age"></p>-->
-  <p id="matches"></p>
-  <p id="goals"></p>
-  <!--<p id="pc_perc"></p>
-  <p id="fouls"></p>
-  <p id="suffered"></p>-->
-  <p id="yellow"></p>
-  <p id="red"></p>
+    <table id="tooltip_table"></table>
 
 </div>
 
@@ -339,37 +332,30 @@ function nest_by_club(nodes){
     return packed;
 }
 
+
+var tooltip_keys = [{"Matches played":"matches"},{"Goals scored":"goals"},{"Yellow cards":"yellow"},{"Red cards":"red"}];
+
 function mouseover(d){
     tooltip.select("#name").text(d.name);
+
     tooltip.select("#club").text(function(){
-        return d.club_name ? 'Club: ' + d.club_name + " (" + d.club_country_code + ")" : ""
+        return d.club_name ?  d.club_name + " (" + d.club_country_code + ")" : ""
     });
-    tooltip.select("#matches").text(function(){
-        return d.matches ? 'Matches: ' + d.matches : ""
+
+    document.getElementById("tooltip_table").innerHTML = '';
+    var available_data = tooltip_keys.filter(function(entry){
+        return d[d3.entries(entry)[0].value];
     });
-    tooltip.select("#goals").text(function(){
-        return d.goals ? 'Goals: ' + d.goals : ""
-    });
-    /*tooltip.select("#pc_perc").text(function(){
-        return d.pc_perc ? 'PC%: ' + d.pc_perc + '%' : ""
-    });
-    tooltip.select("#age").text(function(){
-        return d.age ? 'Age: ' + d.age : ""
-    });
-    tooltip.select("#fouls").text(function(){
-        return d.fouls ? 'Fouls: ' + d.fouls : ""
-    });
-    tooltip.select("#suffered").text(function(){
-        return d.suffered ? 'Suffered: ' + d.suffered : ""
-    });*/
-    tooltip.select("#yellow").text(function(){
-        return d.yellow ? 'Yellow: ' + d.yellow : ""
-    });
-    tooltip.select("#red").text(function(){
-        return d.red ? 'Red: ' + d.red : ""
-    });
-    tooltip.style("top", (d3.event.pageY - 40 ) + "px")
-        .style("left", (d3.event.pageX + 3 ) + "px").classed("hidden",false);
+
+    d3.select("#tooltip_table").selectAll("tr").data(available_data).enter().append("tr")
+        .each(function(row_info){debugger;
+            var tr = d3.select(this);
+            tr.append("td").text(d3.keys(row_info)[0]);
+            tr.append("td").text(d[d3.values(row_info)[0]]  );
+        });
+
+    tooltip.style("top", (d3.event.pageY + 10 ) + "px")
+        .style("left", (d3.event.pageX + 10 ) + "px").classed("hidden",false);
     tooltip.classed("hidden",false);
 }
 
@@ -378,8 +364,8 @@ function mouseout(){
 }
 
 function mousemove(){
-    tooltip.style("top", (d3.event.pageY - 40 ) + "px")
-        .style("left", (d3.event.pageX + 3 ) + "px");
+    tooltip.style("top", (d3.event.pageY +10 ) + "px")
+        .style("left", (d3.event.pageX + 10 ) + "px");
 }
 
 function crosses_rect(x,y){
