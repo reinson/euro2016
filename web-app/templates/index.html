@@ -90,12 +90,12 @@ body {
 <div class="tooltip hidden">
   <strong> <p id="name"></p> </strong>
   <p id="club"></p>
-  <p id="age"></p>
+  <!--<p id="age"></p>-->
   <p id="matches"></p>
   <p id="goals"></p>
-  <p id="pc_perc"></p>
+  <!--<p id="pc_perc"></p>
   <p id="fouls"></p>
-  <p id="suffered"></p>
+  <p id="suffered"></p>-->
   <p id="yellow"></p>
   <p id="red"></p>
 
@@ -379,7 +379,7 @@ function mouseover(d){
     tooltip.select("#goals").text(function(){
         return d.goals ? 'Goals: ' + d.goals : ""
     });
-    tooltip.select("#pc_perc").text(function(){
+    /*tooltip.select("#pc_perc").text(function(){
         return d.pc_perc ? 'PC%: ' + d.pc_perc + '%' : ""
     });
     tooltip.select("#age").text(function(){
@@ -390,7 +390,7 @@ function mouseover(d){
     });
     tooltip.select("#suffered").text(function(){
         return d.suffered ? 'Suffered: ' + d.suffered : ""
-    });
+    });*/
     tooltip.select("#yellow").text(function(){
         return d.yellow ? 'Yellow: ' + d.yellow : ""
     });
