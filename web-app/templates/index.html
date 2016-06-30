@@ -188,7 +188,6 @@ function draw(error, world, players_from_file,uk,country_names){
 
     //ids of euope countries
     var show_ids = country_names.filter(function(d){return d.europe;}).map(function(d){return +d.id});
-    debugger;
 
     var countries = topojson.feature(world, world.objects.countries).features,
         uk_regions = topojson.feature(uk, uk.objects.subunits).features;
@@ -318,7 +317,7 @@ function draw(error, world, players_from_file,uk,country_names){
     var button_data = [
                     {"label":' \uf05a', "infobox": true, "name": "What is this?",
                     "name_info": "This is a small application that shows where the players from teams participating in UEFA Euro2016 play. " +
-                            "Statistics about the players is gathered after the first play-off round.",
+                            "Statistics about the players is gathered after the first playoff round.",
                     "using": "How to use it?",
                     "using_info": "Click to select a country, hover to see the players' data. Be mad if something is wrong or doesn't work. Enyoy!"}
                //     {"label":' \uf153 / \uf0c0' ,"value":"spendings_norm","info":"Kulud ühe elaniku kohta"}
@@ -407,8 +406,10 @@ function mouseover(d){
         });
 
     tooltip.style("top", (d3.event.pageY + 10 ) + "px")
-        .style("left", (d3.event.pageX + 10 ) + "px").classed("hidden",false);
-    tooltip.classed("hidden",false);
+        .style("left",function(){
+            return d.infobox? (d3.event.pageX -350 ) + "px": (d3.event.pageX + 10 ) + "px"})
+            .classed("hidden",false);
+
 }
 
 function mouseout(){
@@ -417,7 +418,7 @@ function mouseout(){
 
 function mousemove(){
     tooltip.style("top", (d3.event.pageY +10 ) + "px")
-        .style("left", (d3.event.pageX + 10 ) + "px");
+        .style("left",function(d){return  (d3.event.pageX + 10 ) + "px"});
 }
 
 function crosses_rect(x,y){
