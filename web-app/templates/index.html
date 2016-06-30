@@ -137,7 +137,7 @@ var player_size = d3.scale.linear()
 function draw_circles(menu_val){
     var players_to_draw = players.filter(function(d){return d.key == menu_val});
 
-    var nodes = svg.selectAll("circle:not(.legend_circle)")
+    var nodes = svg.selectAll("circle:not(.d3button):not(.legend_circle)")
                 .data(players_to_draw[0].values,function(d){return d.name+d.team});
 
     var nodesEnter = nodes.enter()
@@ -306,16 +306,16 @@ function draw(error, world, players_from_file,uk,country_names){
 
         //create svg buttons
     var button_data = [
-                    {"label":' \uf05a' ,"value":"spendings","name":"Raviarvete kulud kokku"}
+                    {"label":' \uf05a', "name":"Raviarvete kulud kokku"}
                //     {"label":' \uf153 / \uf0c0' ,"value":"spendings_norm","info":"Kulud ühe elaniku kohta"}
             ];
-    var bWidth = 25, bheight = 25, x0 = 30;
+    var b_radius = 13, x0 = 30;
 
     svg.append("g").selectAll("d3button")
         .data(button_data).enter().append("g")
         .attr("class","d3button")
         .attr("transform", function(d,i){
-            return "translate(" + (x0+(bWidth+5)*i) + ",30)"
+            return "translate(45,45)"
         })
         /*.on("click",function(d){
             d3.selectAll(".d3button").each(function(d){d3.select(this).classed("active",false)});
@@ -327,18 +327,14 @@ function draw(error, world, players_from_file,uk,country_names){
         .on("mouseover", mouseover)
         .on("mouseout", mouseout)
         .each(function(d,i){
-            d3.select(this).append("rect")
-                .attr("width",bWidth).attr("height",bheight)
-                .attr("rx",5).attr("ry",5);
+            d3.select(this).append("circle")
+                .attr("class","d3button")
+                .attr("r",b_radius);
             d3.select(this).append("text")
-                .attr("x",bWidth/2).attr("y", 17)
+                .attr("y",b_radius/2)
                 .style("fill","white")
                 .text(function(d) {return d.label;})
         });
-
-    d3.selectAll(".d3button").filter(function(d){return d.value==active_view}).classed("active",true);
-
-
 
     draw_circles("France");
 
