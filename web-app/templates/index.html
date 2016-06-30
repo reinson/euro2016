@@ -32,6 +32,11 @@
 
 <div class="tooltip hidden">
   <strong> <p id="name"></p> </strong>
+  <div class="appinfo">
+      <p id="name_info"></p>
+      <strong> <p id="using"></p></strong>
+      <p id="using_info"></p>
+  </div>
   <p id="club"></p>
     <table id="tooltip_table"></table>
 
@@ -292,7 +297,7 @@ function draw(error, world, players_from_file,uk,country_names){
     size_legend.append("text").attr("class", "size_legend_text").text(function(d){return d});
 
 
-    svg.append("text").text("UEFA Euro2016 Players' Home Clubs")
+    svg.append("text").text("Where do they play?! - UEFA Euro2016")
             .attr("class","title_text")
             .attr("transform","translate(" + (width+margin)/2 + ",8)");
 
@@ -306,7 +311,11 @@ function draw(error, world, players_from_file,uk,country_names){
 
         //create svg buttons
     var button_data = [
-                    {"label":' \uf05a', "name":"Raviarvete kulud kokku"}
+                    {"label":' \uf05a', "infobox": true, "name": "What is this?",
+                    "name_info": "This is a small application that shows the homeclubs of players in UEFA euro2016 tournament. " +
+                            "Statistics about the players is gathered after the first play-off round. ",
+                    "using": "How to use?",
+                    "using_info": "Click to select a country, hover to see player data."}
                //     {"label":' \uf153 / \uf0c0' ,"value":"spendings_norm","info":"Kulud ühe elaniku kohta"}
             ];
     var b_radius = 13, x0 = 30;
@@ -315,7 +324,7 @@ function draw(error, world, players_from_file,uk,country_names){
         .data(button_data).enter().append("g")
         .attr("class","d3button")
         .attr("transform", function(d,i){
-            return "translate(45,45)"
+            return "translate(795,50)"
         })
         /*.on("click",function(d){
             d3.selectAll(".d3button").each(function(d){d3.select(this).classed("active",false)});
@@ -326,15 +335,9 @@ function draw(error, world, players_from_file,uk,country_names){
         })*/
         .on("mouseover", mouseover)
         .on("mouseout", mouseout)
-        .each(function(d,i){
-            d3.select(this).append("circle")
-                .attr("class","d3button")
-                .attr("r",b_radius);
-            d3.select(this).append("text")
-                .attr("y",b_radius/2)
+            .append("text")
                 .style("fill","white")
                 .text(function(d) {return d.label;})
-        });
 
     draw_circles("France");
 
@@ -374,13 +377,25 @@ function mouseover(d){
         return d.club_name ?  d.club_name + " (" + d.club_country_code + ")" : ""
     });
 
+    tooltip.select("#name_info").text(function(){
+        return d.name_info ?  d.name_info : ""
+    });
+
+    tooltip.select("#using").text(function(){
+        return d.using ?  d.using : ""
+    });
+
+    tooltip.select("#using_info").text(function(){
+        return d.using_info ?  d.using_info : ""
+    });
+
     document.getElementById("tooltip_table").innerHTML = '';
     var available_data = tooltip_keys.filter(function(entry){
         return d[d3.entries(entry)[0].value];
     });
 
     d3.select("#tooltip_table").selectAll("tr").data(available_data).enter().append("tr")
-        .each(function(row_info){debugger;
+        .each(function(row_info){
             var tr = d3.select(this);
             tr.append("td").text(d3.keys(row_info)[0]);
             tr.append("td").text(d[d3.values(row_info)[0]]  );

@@ -76,6 +76,7 @@ body {
 }
 
 
+
 .tooltip {
         position: absolute;
         width: auto;
@@ -90,6 +91,7 @@ body {
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
         pointer-events: none;
         opacity: 0.8;
+        max-width: 350px;
 }
 
 .tooltip.hidden {
@@ -98,13 +100,24 @@ body {
 
 .tooltip p {
         margin: 0;
-        font-family: sans-serif;
+        margin-left: 2px;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
         font-size: 16px;
         line-height: 20px;
 }
+
 .tooltip td {
-    font-size: 14px;
+    margin: 0;
+    font-size: 13px;
     line-height: 15px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.appinfo {
+    margin: 0;
+    font-size: 13px;
+    line-height: 15px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 .overlay {
@@ -128,7 +141,7 @@ vertical-align:middle !important;
     fill: #636363;
     cursor: pointer;
     font-family: 'FontAwesome';
-    font-size: 21px;
+    font-size: 24px;
     text-anchor: middle;
 
 }
