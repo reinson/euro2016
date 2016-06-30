@@ -16,6 +16,7 @@
     <meta http-equiv="Cache-Control" content="no-store" />
 
     <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 </head>
 <body>
@@ -302,6 +303,41 @@ function draw(error, world, players_from_file,uk,country_names){
     svg.append("text").text("MATCHES")
         .attr("class","size_legend_title")
         .attr("transform","translate(235," + (45) + ")");
+
+        //create svg buttons
+    var button_data = [
+                    {"label":' \uf05a' ,"value":"spendings","name":"Raviarvete kulud kokku"}
+               //     {"label":' \uf153 / \uf0c0' ,"value":"spendings_norm","info":"Kulud ühe elaniku kohta"}
+            ];
+    var bWidth = 25, bheight = 25, x0 = 30;
+
+    svg.append("g").selectAll("d3button")
+        .data(button_data).enter().append("g")
+        .attr("class","d3button")
+        .attr("transform", function(d,i){
+            return "translate(" + (x0+(bWidth+5)*i) + ",30)"
+        })
+        /*.on("click",function(d){
+            d3.selectAll(".d3button").each(function(d){d3.select(this).classed("active",false)});
+            d3.select(this).classed("active",true);
+            active_view = d.value;
+            update_graphs(dgns_on_screen);
+            d3.select(".y.name").text(d.info);
+        })*/
+        .on("mouseover", mouseover)
+        .on("mouseout", mouseout)
+        .each(function(d,i){
+            d3.select(this).append("rect")
+                .attr("width",bWidth).attr("height",bheight)
+                .attr("rx",5).attr("ry",5);
+            d3.select(this).append("text")
+                .attr("x",bWidth/2).attr("y", 17)
+                .style("fill","white")
+                .text(function(d) {return d.label;})
+        });
+
+    d3.selectAll(".d3button").filter(function(d){return d.value==active_view}).classed("active",true);
+
 
 
     draw_circles("France");

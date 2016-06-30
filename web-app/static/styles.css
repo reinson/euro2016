@@ -123,3 +123,12 @@ vertical-align: middle;
 .social div span {
 vertical-align:middle !important;
 }
+
+.d3button {
+    fill: #0570b0;
+    cursor: pointer;
+    font-family: 'FontAwesome';
+    font-size: 16px;
+    text-anchor: middle;
+
+}
