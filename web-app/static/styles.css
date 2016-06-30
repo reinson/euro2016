@@ -16,7 +16,7 @@ body {
 }
 
 .country {
-    fill: #EDEDF2;
+    fill: #e7e7ee;
     stroke: #fff;
     stroke-linejoin: round;
     stroke-linecap: round;
@@ -72,6 +72,13 @@ body {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     text-anchor: middle;
     font-size: 30px;
+    fill: #636363;
+}
+
+.author_text{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    text-anchor: middle;
+    font-size: 10px;
     fill: #636363;
 }
 
