@@ -301,6 +301,10 @@ function draw(error, world, players_from_file,uk,country_names){
             .attr("class","title_text")
             .attr("transform","translate(" + (width+margin)/2 + ",8)");
 
+    svg.append("text").text("Created by Tormi Reinson & Mari-Liis Allikivi")
+            .attr("class", "author_text")
+            .attr("transform", "translate(425,597)")
+
     svg.append("text").text("POSITION")
         .attr("class","legend_title")
         .attr("transform","translate(225," + (45) + ")");

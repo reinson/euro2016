@@ -75,6 +75,13 @@ body {
     fill: #636363;
 }
 
+.author_text{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    text-anchor: middle;
+    font-size: 10px;
+    fill: #636363;
+}
+
 
 
 .tooltip {
