@@ -188,6 +188,7 @@ function draw(error, world, players_from_file,uk,country_names){
 
     //ids of euope countries
     var show_ids = country_names.filter(function(d){return d.europe;}).map(function(d){return +d.id});
+    debugger;
 
     var countries = topojson.feature(world, world.objects.countries).features,
         uk_regions = topojson.feature(uk, uk.objects.subunits).features;
@@ -447,9 +448,6 @@ d3.select(self.frameElement).style("height", height + "px");
         <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Feuro2016map.appspot.com%2F&amp;src=sdkpreparse">Share</a>
     </div>
 
-
     <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://http://euro2016map.appspot.com/" data-text="Interactive visualization of UEFA euro2016 players' home clubs." data-via="TormiReinson">Tweet</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-    <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="//www.redditstatic.com/spreddit1.gif" alt="submit to reddit" style="height:19px" border="0" /> </a>
 </div>
